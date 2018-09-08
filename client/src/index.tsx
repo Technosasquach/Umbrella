@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render } from "react-dom";
 
-import SearchPage from "./components/SearchPage";
+// import SearchPage from "./components/SearchPage";
 import ResultPage from "./components/ResultPage";
 
 // import "/node_modules/muuri/dist/muuri.min.js";
@@ -18,7 +18,7 @@ export default class Root extends React.Component {
     render() {
         return (
             <div className="app">
-                <SearchPage/>
+                {/* <SearchPage/> */}
                 <ResultPage/>
             </div>
         );

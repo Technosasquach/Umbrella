@@ -86,6 +86,67 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./client/src/components/LogoSVG.tsx":
+/*!*******************************************!*\
+  !*** ./client/src/components/LogoSVG.tsx ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var LogoSVG = /** @class */ (function (_super) {
+    __extends(LogoSVG, _super);
+    function LogoSVG(props) {
+        return _super.call(this, props) || this;
+    }
+    LogoSVG.prototype.render = function () {
+        return (React.createElement("svg", { version: "1.1", id: "Layer_1", x: "0px", y: "0px", viewBox: "0 0 222.5 69.6" },
+            React.createElement("path", { className: "st0", d: "M74.5,20.5L74.5,20.5V7.6h3v12.9l0,0c0,0.8,0.1,1.6,0.4,2.1l0,0l0,0c0.2,0.6,0.6,1,1,1.4l0,0l0,0\n                    c0.5,0.3,1,0.6,1.5,0.7l0,0l0,0c0.6,0.1,1.2,0.2,2,0.2l0,0l0,0c1.5,0,2.7-0.3,3.6-1l0,0l0,0c0.8-0.7,1.3-1.8,1.3-3.4l0,0V7.6h3v12.8\n                    l0,0c0,1-0.1,1.9-0.4,2.7l0,0l0,0c-0.3,0.8-0.7,1.4-1.1,2l0,0l0,0c-0.5,0.5-1,1-1.7,1.3l0,0l0,0c-0.7,0.3-1.4,0.6-2.1,0.7l0,0l0,0\n                    c-0.7,0.2-1.5,0.2-2.4,0.2l0,0l0,0c-0.8,0-1.6-0.1-2.4-0.2l0,0l0,0c-0.8-0.2-1.5-0.4-2.1-0.7l0,0l0,0c-0.7-0.3-1.3-0.8-1.7-1.3l0,0\n                    l0,0c-0.5-0.5-0.9-1.2-1.2-2l0,0l0,0C74.6,22.4,74.5,21.5,74.5,20.5z" }),
+            React.createElement("path", { className: "st0", d: "M121.9,26.9H119v-10l0,0c0-0.9,0-1.7-0.1-2.4l0,0l0,0c0-0.6-0.1-1.3-0.3-1.9l0,0l0,0c-0.1-0.7-0.4-1.2-0.6-1.6\n                    l0,0l0,0c-0.3-0.4-0.6-0.7-1.1-0.9l0,0l0,0c-0.5-0.2-1-0.4-1.7-0.4l0,0l0,0c-1.3,0-2.4,0.3-3.3,1l0,0l0,0c-0.9,0.7-1.6,1.7-1.9,2.9\n                    l0,0l0,0c-0.1,0.8-0.2,1.7-0.2,2.7l0,0v10.5h-2.9V16.6l0,0c0-0.9,0-1.6-0.1-2.3l0,0l0,0c-0.1-0.6-0.2-1.3-0.3-1.9l0,0l0,0\n                    c-0.2-0.6-0.4-1.1-0.7-1.5l0,0l0,0c-0.3-0.4-0.6-0.7-1.1-0.9l0,0l0,0c-0.5-0.2-1-0.3-1.6-0.3l0,0l0,0c-1.4,0-2.6,0.4-3.5,1.1l0,0\n                    l0,0c-1,0.7-1.6,1.7-1.9,2.8l0,0l0,0c-0.1,0.9-0.2,1.9-0.2,2.9l0,0v10.3h-2.9l0,0c0-12.1,0-18.5,0-19.3l0,0h2.5l0.4,2.8l0,0\n                    c0.6-0.9,1.4-1.6,2.5-2.2l0,0l0,0c1.1-0.6,2.3-0.9,3.7-0.9l0,0l0,0c0.7,0,1.4,0.1,2,0.2l0,0l0,0c0.6,0.1,1.1,0.3,1.5,0.6l0,0l0,0\n                    c0.4,0.2,0.8,0.5,1.1,0.8l0,0l0,0c0.3,0.3,0.6,0.6,0.7,0.9l0,0l0,0c0.2,0.3,0.3,0.6,0.4,0.9l0,0l0,0c1.4-2.3,3.6-3.4,6.5-3.4l0,0\n                    l0,0c2.1,0,3.7,0.6,4.7,1.8l0,0l0,0c1,1.2,1.5,3,1.5,5.4l0,0V26.9L121.9,26.9z" }),
+            React.createElement("path", { className: "st0", d: "M141.9,12.1c-0.6-1.5-1.5-2.7-2.8-3.5c-1.2-0.9-2.7-1.3-4.4-1.3c-1.2,0-2.4,0.3-3.5,0.8c-1.1,0.6-2,1.3-2.6,2.3\n                    c0-1.1,0.1-2.5,0.1-4V0l-2.9,0.2v26.8h2.5l0.3-2.7c0.7,1,1.6,1.7,2.6,2.2c1.1,0.6,2.2,0.8,3.5,0.8c1.7,0,3.2-0.4,4.5-1.3\n                    c1.2-0.9,2.2-2.1,2.8-3.6c0.6-1.5,0.9-3.3,0.9-5.2C142.9,15.3,142.5,13.6,141.9,12.1z M139.5,20.3c-0.2,0.9-0.5,1.7-0.9,2.4\n                    c-0.4,0.7-1,1.3-1.7,1.7c-0.7,0.4-1.5,0.6-2.5,0.6c-1.9,0-3.4-0.6-4.3-1.9c-1-1.3-1.4-3.2-1.4-5.7c0-2.5,0.5-4.4,1.5-5.6\n                    c1-1.3,2.4-1.9,4.3-1.9c1.3,0,2.3,0.3,3.1,1c0.8,0.7,1.4,1.6,1.8,2.7c0.3,1.1,0.5,2.4,0.5,3.9C139.8,18.4,139.7,19.4,139.5,20.3z" }),
+            React.createElement("path", { className: "st0", d: "M155.6,7.5L155.6,7.5L155.6,7.5c0.5,0,1,0,1.4,0.1l0,0l-0.1,2.7l0,0c-0.5-0.1-1-0.1-1.4-0.1l0,0l0,0\n                    c-1.6,0-3,0.6-4,1.7l0,0l0,0c-1,1.1-1.5,2.6-1.5,4.2l0,0v10.8h-2.9l0,0c0-11.8,0-18.3,0-19.3l0,0h2.4l0.3,3.5l0,0\n                    c0.7-1.1,1.5-2,2.5-2.6l0,0l0,0C153.4,7.8,154.5,7.5,155.6,7.5z" }),
+            React.createElement("path", { className: "st0", d: "M173.4,9.7c-1.4-1.6-3.3-2.4-5.7-2.4c-1.3,0-2.4,0.3-3.4,0.7c-1,0.5-1.9,1.2-2.7,2.1c-1.6,1.9-2.3,4.3-2.3,7.3\n                    c0,3.1,0.8,5.5,2.4,7.3c1.6,1.8,3.8,2.7,6.6,2.7c2.5,0,4.7-0.6,6.7-1.8l-0.5-2.4c-2,1.1-4.1,1.6-6.1,1.6c-1.8,0-3.3-0.6-4.4-1.8\n                    c-1.1-1.2-1.7-2.9-1.7-5.1h13.2c0-0.2,0-0.4,0-0.8c0-0.4,0-0.6,0-0.8C175.5,13.5,174.8,11.3,173.4,9.7z M162.3,15.6\n                    c0.2-1.8,0.7-3.3,1.7-4.4s2.2-1.6,3.7-1.6s2.7,0.5,3.5,1.5c0.9,1,1.3,2.5,1.3,4.4H162.3z" }),
+            React.createElement("path", { className: "st0", d: "M184.8,27.3L184.8,27.3L184.8,27.3c-1.9,0-3.2-0.5-4-1.5l0,0l0,0c-0.8-1-1.2-2.8-1.2-5.3l0,0V0.2l2.9-0.2v19.4\n                    l0,0c0,0.8,0,1.4,0,1.9l0,0l0,0c0,0.5,0.1,1,0.1,1.4l0,0l0,0c0.1,0.5,0.2,0.8,0.3,1l0,0l0,0c0.1,0.2,0.3,0.4,0.5,0.6l0,0l0,0\n                    c0.2,0.2,0.5,0.3,0.8,0.4l0,0l0,0c0.3,0.1,0.7,0.1,1.2,0.1l0,0l0,0c0.4,0,1.1-0.1,2.2-0.2l0,0l0.2,2.3l0,0\n                    C186.6,27.2,185.6,27.3,184.8,27.3z" }),
+            React.createElement("path", { className: "st0", d: "M194.8,27.3L194.8,27.3L194.8,27.3c-1.9,0-3.2-0.5-4-1.5l0,0l0,0c-0.8-1-1.2-2.8-1.2-5.3l0,0V0.2l2.9-0.2v19.4\n                    l0,0c0,0.8,0,1.4,0,1.9l0,0l0,0c0,0.5,0.1,1,0.1,1.4l0,0l0,0c0.1,0.5,0.2,0.8,0.3,1l0,0l0,0c0.1,0.2,0.3,0.4,0.5,0.6l0,0l0,0\n                    c0.2,0.2,0.5,0.3,0.8,0.4l0,0l0,0c0.3,0.1,0.7,0.1,1.2,0.1l0,0l0,0c0.4,0,1.1-0.1,2.2-0.2l0,0l0.2,2.3l0,0\n                    C196.6,27.2,195.6,27.3,194.8,27.3z" }),
+            React.createElement("path", { className: "st0", d: "M212.2,8.8c-1.1-1-2.8-1.6-5.2-1.6c-1.2,0-2.4,0.1-3.6,0.4c-1.2,0.3-2.2,0.7-3,1.1c0,0,0.1,0.4,0.4,1\n                    c0.2,0.7,0.4,1.1,0.5,1.2c1.9-0.9,3.9-1.4,5.8-1.4c1.4,0,2.4,0.3,3,1c0.6,0.6,1,1.7,1,3v1.7c-0.4,0-1,0.1-1.8,0.1\n                    c-0.8,0.1-1.4,0.1-1.8,0.1c-2.8,0.2-5,0.8-6.5,1.8c-1.5,1-2.2,2.4-2.2,4.4c0,1.8,0.5,3.1,1.6,4.1c1.1,0.9,2.5,1.4,4.3,1.4\n                    c1.3,0,2.4-0.2,3.3-0.6c0.9-0.4,1.9-1.2,3-2.2c0.2,0.9,0.3,1.7,0.5,2.4h2.3V14.2C213.8,11.7,213.3,9.9,212.2,8.8z M210.9,20.7\n                    c-0.3,1.3-1,2.3-2,3.1c-1.1,0.8-2.3,1.2-3.7,1.2c-1.1,0-1.9-0.3-2.5-0.8c-0.6-0.5-0.9-1.3-0.9-2.3c0-1.3,0.5-2.3,1.5-2.9\n                    c1-0.6,2.8-1,5.3-1.2c0.2,0,0.6,0,1.3-0.1c0.6-0.1,1-0.1,1.1-0.1V20.7z" }),
+            React.createElement("path", { className: "st0", d: "M80.9,66.3L80.9,66.3L80.9,66.3c-1.3,0-2.5-0.1-3.6-0.4l0,0l0,0c-1.1-0.3-2-0.6-2.7-1.1l0,0l0.4-2.5l0,0\n                    c2,1,3.9,1.6,5.8,1.6l0,0l0,0c2.9,0,4.3-1,4.4-3l0,0l0,0c0-0.9-0.3-1.5-0.9-2l0,0l0,0c-0.6-0.5-1.8-1-3.6-1.7l0,0l-1.5-0.5l0,0\n                    c-1.7-0.6-2.9-1.3-3.6-2.1l0,0l0,0c-0.7-0.8-1.1-1.9-1.1-3.1l0,0l0,0c0-1.5,0.6-2.8,1.8-3.8l0,0l0,0c1.2-1,2.9-1.5,5-1.5l0,0l0,0\n                    c2.2,0,4.2,0.4,6,1.3l0,0l-0.9,2.2l0,0c-1.8-0.8-3.5-1.1-5.1-1.1l0,0l0,0c-1.2,0-2.2,0.2-2.9,0.7l0,0l0,0c-0.7,0.5-1,1.2-1,2l0,0\n                    l0,0c0,0.8,0.3,1.3,0.8,1.7l0,0l0,0c0.5,0.4,1.5,0.9,3,1.4l0,0l0,0c0.4,0.1,0.9,0.3,1.5,0.5l0,0l0,0c1.9,0.6,3.3,1.4,4.1,2.2l0,0\n                    l0,0c0.8,0.9,1.2,2,1.2,3.5l0,0l0,0c0,1.8-0.7,3.2-1.9,4.1l0,0l0,0C84.7,65.8,83,66.3,80.9,66.3z" }),
+            React.createElement("path", { className: "st0", d: "M100,66.3L100,66.3L100,66.3c-2.8,0-5.1-0.9-6.7-2.8l0,0l0,0c-1.6-1.8-2.4-4.2-2.4-7.2l0,0l0,0\n                    c0-3,0.8-5.4,2.5-7.3l0,0l0,0c1.6-1.9,3.8-2.8,6.7-2.8l0,0l0,0c1,0,2,0.1,2.9,0.4l0,0l0,0c0.9,0.2,1.7,0.6,2.2,1l0,0l-0.8,2.3l0,0\n                    c-1.4-0.7-2.8-1.1-4.3-1.1l0,0l0,0c-1.9,0-3.3,0.7-4.4,2l0,0l0,0C94.6,52.2,94,54,94,56.4l0,0l0,0c0,2.3,0.5,4.1,1.6,5.5l0,0l0,0\n                    c1.1,1.3,2.6,2,4.5,2l0,0l0,0c1.5,0,3.1-0.4,4.6-1.2l0,0l0.4,2.3l0,0C103.8,65.9,102.1,66.3,100,66.3z" }),
+            React.createElement("polygon", { className: "st0", points: "109.4,46.6 112.4,46.6 112.4,65.9 109.4,65.9 109.4,46.6 " }),
+            React.createElement("polygon", { className: "st0", points: "109.4,39.6 112.4,39.6 112.4,43.1 109.4,43.1 109.4,39.6 " }),
+            React.createElement("path", { className: "st0", d: "M123.6,66.3L123.6,66.3L123.6,66.3c-1.3,0-2.5-0.1-3.6-0.4l0,0l0,0c-1.1-0.3-2-0.6-2.7-1.1l0,0l0.4-2.5l0,0\n                    c2,1,3.9,1.6,5.8,1.6l0,0l0,0c2.9,0,4.3-1,4.4-3l0,0l0,0c0-0.9-0.3-1.5-0.9-2l0,0l0,0c-0.6-0.5-1.8-1-3.6-1.7l0,0l-1.5-0.5l0,0\n                    c-1.7-0.6-2.9-1.3-3.6-2.1l0,0l0,0c-0.7-0.8-1.1-1.9-1.1-3.1l0,0l0,0c0-1.5,0.6-2.8,1.8-3.8l0,0l0,0c1.2-1,2.9-1.5,5-1.5l0,0l0,0\n                    c2.2,0,4.2,0.4,6,1.3l0,0l-0.9,2.2l0,0c-1.8-0.8-3.5-1.1-5.1-1.1l0,0l0,0c-1.2,0-2.2,0.2-2.9,0.7l0,0l0,0c-0.7,0.5-1,1.2-1,2l0,0\n                    l0,0c0,0.8,0.3,1.3,0.8,1.7l0,0l0,0c0.5,0.4,1.5,0.9,3,1.4l0,0l0,0c0.4,0.1,0.9,0.3,1.5,0.5l0,0l0,0c1.9,0.6,3.3,1.4,4.1,2.2l0,0\n                    l0,0c0.8,0.9,1.2,2,1.2,3.5l0,0l0,0c0,1.8-0.7,3.2-1.9,4.1l0,0l0,0C127.5,65.8,125.8,66.3,123.6,66.3z" }),
+            React.createElement("path", { className: "st0", d: "M147.9,48.7c-1.4-1.6-3.3-2.4-5.7-2.4c-1.3,0-2.4,0.3-3.5,0.7c-1,0.5-1.9,1.2-2.7,2.1c-1.6,1.9-2.3,4.3-2.3,7.3\n                    c0,3.1,0.8,5.5,2.4,7.3c1.6,1.8,3.8,2.7,6.6,2.7c2.5,0,4.7-0.6,6.7-1.8l-0.5-2.4c-2.1,1.1-4.1,1.6-6.1,1.6c-1.9,0-3.3-0.6-4.4-1.8\n                    c-1.1-1.2-1.7-2.9-1.7-5.1H150c0-0.2,0-0.4,0-0.8v-0.8C150,52.5,149.3,50.3,147.9,48.7z M136.9,54.6c0.2-1.8,0.7-3.3,1.7-4.4\n                    c1-1.1,2.2-1.6,3.7-1.6s2.7,0.5,3.5,1.5c0.9,1,1.3,2.5,1.3,4.4H136.9z" }),
+            React.createElement("path", { className: "st0", d: "M166.8,47.8c-1.1-1-2.8-1.6-5.2-1.6c-1.2,0-2.4,0.1-3.6,0.4c-1.2,0.3-2.2,0.7-3,1.1c0,0,0.1,0.4,0.4,1\n                    c0.2,0.7,0.4,1.1,0.5,1.2c1.9-0.9,3.8-1.4,5.7-1.4c1.4,0,2.4,0.3,3,1c0.6,0.6,1,1.7,1,3v1.7c-0.4,0-1,0.1-1.8,0.1\n                    c-0.8,0.1-1.4,0.1-1.8,0.1c-2.8,0.2-5,0.8-6.5,1.8c-1.5,1-2.2,2.4-2.2,4.4c0,1.8,0.5,3.1,1.6,4.1c1.1,0.9,2.5,1.4,4.4,1.4\n                    c1.3,0,2.4-0.2,3.3-0.6c0.9-0.4,1.9-1.2,3-2.2c0.2,0.9,0.3,1.7,0.5,2.4h2.3V53.2C168.3,50.7,167.8,48.9,166.8,47.8z M165.4,59.7\n                    c-0.3,1.3-1,2.3-2,3.1c-1.1,0.8-2.3,1.2-3.7,1.2c-1.1,0-1.9-0.3-2.5-0.8c-0.6-0.5-0.9-1.3-0.9-2.3c0-1.3,0.5-2.3,1.5-2.9\n                    s2.8-1,5.3-1.2c0.2,0,0.6,0,1.3-0.1c0.7-0.1,1-0.1,1.1-0.1V59.7z" }),
+            React.createElement("path", { className: "st0", d: "M182.1,46.5L182.1,46.5L182.1,46.5c0.5,0,1,0,1.4,0.1l0,0l-0.1,2.7l0,0c-0.5-0.1-1-0.1-1.4-0.1l0,0l0,0\n                    c-1.6,0-3,0.6-4,1.7l0,0l0,0c-1,1.1-1.5,2.6-1.5,4.2l0,0v10.8h-2.9l0,0c0-11.8,0-18.3,0-19.3l0,0h2.4l0.3,3.5l0,0\n                    c0.7-1.1,1.5-2,2.5-2.6l0,0l0,0C179.8,46.8,180.9,46.5,182.1,46.5z" }),
+            React.createElement("path", { className: "st0", d: "M194.7,66.3L194.7,66.3L194.7,66.3c-2.8,0-5.1-0.9-6.7-2.8l0,0l0,0c-1.6-1.8-2.4-4.2-2.4-7.2l0,0l0,0\n                    c0-3,0.8-5.4,2.5-7.3l0,0l0,0c1.6-1.9,3.8-2.8,6.7-2.8l0,0l0,0c1,0,2,0.1,2.9,0.4l0,0l0,0c0.9,0.2,1.7,0.6,2.2,1l0,0l-0.8,2.3l0,0\n                    c-1.4-0.7-2.8-1.1-4.3-1.1l0,0l0,0c-1.9,0-3.3,0.7-4.4,2l0,0l0,0c-1.1,1.4-1.6,3.2-1.6,5.6l0,0l0,0c0,2.3,0.5,4.1,1.6,5.5l0,0l0,0\n                    c1.1,1.3,2.6,2,4.5,2l0,0l0,0c1.5,0,3.1-0.4,4.6-1.2l0,0l0.4,2.3l0,0C198.5,65.9,196.8,66.3,194.7,66.3z" }),
+            React.createElement("path", { className: "st0", d: "M219.5,65.9h-2.9V54.3l0,0c0-1.9-0.3-3.3-0.9-4.2l0,0l0,0c-0.6-0.9-1.7-1.3-3.2-1.3l0,0l0,0\n                    c-1.5,0-2.7,0.4-3.7,1.1l0,0l0,0c-1,0.7-1.7,1.7-2,2.9l0,0l0,0c-0.1,0.9-0.2,1.9-0.2,2.9l0,0v10.3h-2.9V39.2l2.9-0.2v7.8l0,0\n                    c0,0.7,0,1.5-0.1,2.5l0,0l0,0c1.7-2,3.8-3.1,6.6-3.1l0,0l0,0c4.3,0,6.5,2.5,6.5,7.6l0,0V65.9L219.5,65.9z" }),
+            React.createElement("g", null,
+                React.createElement("rect", { x: "74.6", y: "33.7", className: "st1", width: "148", height: "2" })),
+            React.createElement("polygon", { className: "st0", points: "58.4,67.6 55,69.6 48.2,58.3 48.7,58 17.9,6.7 20.1,5.4 51,56.6 51.5,56.3 " }),
+            React.createElement("path", { className: "st1", d: "M16.8,51.1c-5-0.1-9.2,1.1-12.7,3.4C-5,39.4,1.7,18.6,19.1,7.8C7.8,15.2,6.8,34.4,16.8,51.1z" }),
+            React.createElement("path", { className: "st2", d: "M34.2,31.3c7.2-4.5,15.7-6.5,25.5-6c2.6-4.6,5.6-7.8,9-9.6C59.5,0.5,37.8-3.2,20,7.2L34.2,31.3L34.2,31.3z" }),
+            React.createElement("path", { className: "st2", d: "M39.4,39.8C39.3,39.9,39.3,39.9,39.4,39.8c-7.9,1.6-15.4,5.3-22.5,11.3c-10.1-16.7-9-35.9,2.3-43.3\n                    c0.2-0.1,0.4-0.3,0.6-0.4c0.1-0.1,0.2-0.1,0.3-0.2h0L39.4,39.8z" }),
+            React.createElement("path", { className: "st1", d: "M39.4,39.8c6.8-7.3,13.6-12.2,20.3-14.5C49.5,8.5,31.9,0.5,20,7.2L39.4,39.8L39.4,39.8z" })));
+    };
+    return LogoSVG;
+}(React.Component));
+exports.default = LogoSVG;
+
+
+/***/ }),
+
 /***/ "./client/src/components/ResultPage.less":
 /*!***********************************************!*\
   !*** ./client/src/components/ResultPage.less ***!
@@ -212,32 +273,105 @@ __webpack_require__(/*! ./APICard.less */ "./client/src/components/ResultPage/AP
 var TemplateCard = /** @class */ (function (_super) {
     __extends(TemplateCard, _super);
     function TemplateCard(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            isVisible: true
+        };
+        return _this;
     }
+    TemplateCard.prototype.setVisibilty = function (a) {
+        this.setState({
+            isVisible: a
+        });
+    };
     TemplateCard.prototype.render = function () {
-        return (React.createElement("div", { className: "item card card-size-2" },
-            " ",
-            React.createElement("div", { className: "card-header" }, "Search: ..."),
-            React.createElement("div", { className: "card-body" },
-                React.createElement("h5", { className: "card-title" }, "Card title"),
-                React.createElement("h6", { className: "card-subtitle mb-2 text-muted" }, "Card subtitle"),
-                React.createElement("p", { className: "card-text" }, "Some quick example text to build on the card title and make up the bulk of the card's content.")),
-            React.createElement("ul", { className: "list-group list-group-flush" },
-                React.createElement("li", { className: "list-group-item" }, "Cras justo odio"),
-                React.createElement("li", { className: "list-group-item" }, "Dapibus ac facilisis in"),
-                React.createElement("li", { className: "list-group-item" }, "Vestibulum at eros")),
-            React.createElement("div", { className: "card-body" },
-                React.createElement("p", { className: "card-text" },
-                    React.createElement("small", { className: "text-muted" }, "Last updated 3 mins ago")),
-                React.createElement("a", { href: "#", className: "card-link" }, "Card link"),
-                React.createElement("a", { href: "#", className: "card-link" }, "Another link")),
-            React.createElement("div", { className: "card-footer" },
-                React.createElement("span", { className: "text-muted text-left" }, "2 days ago"),
-                React.createElement("a", { href: "#", className: "text-right float-right" }, "Dataset"))));
+        if (this.state.isVisible) {
+            return (React.createElement("div", { className: "item card card-size-2" },
+                " ",
+                React.createElement("div", { className: "card-header" },
+                    React.createElement("span", { className: "text-left" }, "Search...")),
+                React.createElement("div", { className: "card-body" },
+                    React.createElement("h5", { className: "card-title" }, "Card title"),
+                    React.createElement("h6", { className: "card-subtitle mb-2 text-muted" }, "Card subtitle"),
+                    React.createElement("p", { className: "card-text" }, "Some quick example text to build on the card title and make up the bulk of the card's content.")),
+                React.createElement("ul", { className: "list-group list-group-flush" },
+                    React.createElement("li", { className: "list-group-item" }, "Cras justo odio"),
+                    React.createElement("li", { className: "list-group-item" }, "Dapibus ac facilisis in"),
+                    React.createElement("li", { className: "list-group-item" }, "Vestibulum at eros")),
+                React.createElement("div", { className: "card-body" },
+                    React.createElement("p", { className: "card-text" },
+                        React.createElement("small", { className: "text-muted" }, "Last updated 3 mins ago")),
+                    React.createElement("a", { href: "#", className: "card-link" }, "Card link"),
+                    React.createElement("a", { href: "#", className: "card-link" }, "Another link")),
+                React.createElement("div", { className: "card-footer" },
+                    React.createElement("span", { className: "text-muted text-left" }, "2 days ago"),
+                    React.createElement("a", { href: "#", className: "text-right float-right" }, "Dataset"))));
+        }
+        else {
+            return ("");
+        }
     };
     return TemplateCard;
 }(React.Component));
 exports.default = TemplateCard;
+
+
+/***/ }),
+
+/***/ "./client/src/components/ResultPage/APICards/WildlifeCard.tsx":
+/*!********************************************************************!*\
+  !*** ./client/src/components/ResultPage/APICards/WildlifeCard.tsx ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+__webpack_require__(/*! ./APICard.less */ "./client/src/components/ResultPage/APICards/APICard.less");
+var WildlifeCard = /** @class */ (function (_super) {
+    __extends(WildlifeCard, _super);
+    function WildlifeCard(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            exampleState: ""
+        };
+        return _this;
+    }
+    WildlifeCard.prototype.componentDidMount = function () {
+        var _this = this;
+        axios_1.default.post('url').then(function (response) {
+            console.log("Response: " + JSON.stringify(response));
+            _this.setState({
+                exampleState: "Hello World"
+            });
+        });
+    };
+    WildlifeCard.prototype.render = function () {
+        return (React.createElement("div", { className: "item card card-size-2" },
+            " ",
+            React.createElement("div", { className: "card-header" },
+                React.createElement("span", { className: "text-left" }, "Search...")),
+            React.createElement("div", { className: "card-body" },
+                React.createElement("h5", { className: "card-title" }, "Card title"),
+                React.createElement("h6", { className: "card-subtitle mb-2 text-muted" }, "Card subtitle"),
+                React.createElement("p", { className: "card-text" }, "Some quick example text to build on the card title and make up the bulk of the card's content."))));
+    };
+    return WildlifeCard;
+}(React.Component));
+exports.default = WildlifeCard;
 
 
 /***/ }),
@@ -295,6 +429,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 __webpack_require__(/*! ./ResultArea.less */ "./client/src/components/ResultPage/ResultArea.less");
 var TemplateCard_1 = __webpack_require__(/*! ./APICards/TemplateCard */ "./client/src/components/ResultPage/APICards/TemplateCard.tsx");
+var WildlifeCard_1 = __webpack_require__(/*! ./APICards/WildlifeCard */ "./client/src/components/ResultPage/APICards/WildlifeCard.tsx");
 // declare var Muuri: any;
 var Muuri = __webpack_require__(/*! muuri */ "./node_modules/muuri/dist/muuri.js");
 var ResultArea = /** @class */ (function (_super) {
@@ -320,14 +455,7 @@ var ResultArea = /** @class */ (function (_super) {
     ResultArea.prototype.render = function () {
         return (React.createElement("div", { className: "ResultArea" },
             React.createElement("div", { className: "grid" },
-                React.createElement(TemplateCard_1.default, { query: {} }),
-                React.createElement(TemplateCard_1.default, { query: {} }),
-                React.createElement(TemplateCard_1.default, { query: {} }),
-                React.createElement(TemplateCard_1.default, { query: {} }),
-                React.createElement(TemplateCard_1.default, { query: {} }),
-                React.createElement(TemplateCard_1.default, { query: {} }),
-                React.createElement(TemplateCard_1.default, { query: {} }),
-                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(WildlifeCard_1.default, { query: {} }),
                 React.createElement(TemplateCard_1.default, { query: {} }))));
     };
     return ResultArea;
@@ -388,19 +516,41 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 __webpack_require__(/*! ./SearchContainer.less */ "./client/src/components/ResultPage/SearchContainer.less");
+var LogoSVG_1 = __webpack_require__(/*! ./../LogoSVG */ "./client/src/components/LogoSVG.tsx");
 var ResultArea = /** @class */ (function (_super) {
     __extends(ResultArea, _super);
     function ResultArea(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            searchArea: ""
+        };
+        return _this;
     }
+    ResultArea.prototype.handleSearchChange = function (event) {
+        this.setState({
+            searchArea: event.target.value
+        });
+    };
+    ResultArea.prototype.handleKeyPress = function (event) {
+        if (event.key === 'Enter') {
+            this.search();
+        }
+    };
+    ResultArea.prototype.search = function () {
+        console.log("Hello World");
+        axios_1.default.post("/api/findLoc/absolute/" + this.state.searchArea).then(function (response) {
+            console.log("Response: " + JSON.stringify(response.data));
+        });
+    };
     ResultArea.prototype.render = function () {
+        var _this = this;
         return (React.createElement("div", { className: "SearchContainer" },
             React.createElement("div", { className: "SearchIcon" },
-                React.createElement("img", { src: "https://via.placeholder.com/20x20" }),
-                React.createElement("span", null, "Umbrella")),
+                React.createElement(LogoSVG_1.default, null)),
             React.createElement("div", { className: "SearchZone input-group" },
-                React.createElement("input", { className: "form-control", type: "text", placeholder: ">" }),
+                React.createElement("input", { className: "form-control", type: "text", placeholder: ">", value: this.state.searchArea, onChange: this.handleSearchChange.bind(this), onKeyPress: this.handleKeyPress.bind(this), onSubmit: function () { _this.search(); } }),
                 React.createElement("div", { className: "input-group-append" },
                     React.createElement("button", { className: "btn btn-outline-primary" }, "Search!"))),
             React.createElement("div", { className: "SearchOptions" },
@@ -409,73 +559,6 @@ var ResultArea = /** @class */ (function (_super) {
     return ResultArea;
 }(React.Component));
 exports.default = ResultArea;
-
-
-/***/ }),
-
-/***/ "./client/src/components/SearchPage.less":
-/*!***********************************************!*\
-  !*** ./client/src/components/SearchPage.less ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/less-loader/dist/cjs.js!./SearchPage.less */ "./node_modules/css-loader/index.js!./node_modules/less-loader/dist/cjs.js!./client/src/components/SearchPage.less");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./client/src/components/SearchPage.tsx":
-/*!**********************************************!*\
-  !*** ./client/src/components/SearchPage.tsx ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-__webpack_require__(/*! ./SearchPage.less */ "./client/src/components/SearchPage.less");
-var SearchPage = /** @class */ (function (_super) {
-    __extends(SearchPage, _super);
-    function SearchPage(props) {
-        return _super.call(this, props) || this;
-    }
-    SearchPage.prototype.render = function () {
-        return (React.createElement("div", { className: "SearchPage" }));
-    };
-    return SearchPage;
-}(React.Component));
-exports.default = SearchPage;
 
 
 /***/ }),
@@ -532,7 +615,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var react_dom_1 = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-var SearchPage_1 = __webpack_require__(/*! ./components/SearchPage */ "./client/src/components/SearchPage.tsx");
+// import SearchPage from "./components/SearchPage";
 var ResultPage_1 = __webpack_require__(/*! ./components/ResultPage */ "./client/src/components/ResultPage.tsx");
 // import "/node_modules/muuri/dist/muuri.min.js";
 __webpack_require__(/*! ./public/animate.css */ "./client/src/public/animate.css");
@@ -545,7 +628,6 @@ var Root = /** @class */ (function (_super) {
     }
     Root.prototype.render = function () {
         return (React.createElement("div", { className: "app" },
-            React.createElement(SearchPage_1.default, null),
             React.createElement(ResultPage_1.default, null)));
     };
     return Root;
@@ -613,6 +695,1674 @@ var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addS
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/axios/index.js":
+/*!*************************************!*\
+  !*** ./node_modules/axios/index.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/lib/axios.js");
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/adapters/xhr.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/adapters/xhr.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
+var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
+var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./node_modules/axios/lib/helpers/isURLSameOrigin.js");
+var createError = __webpack_require__(/*! ../core/createError */ "./node_modules/axios/lib/core/createError.js");
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(/*! ./../helpers/btoa */ "./node_modules/axios/lib/helpers/btoa.js");
+
+module.exports = function xhrAdapter(config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    var requestData = config.data;
+    var requestHeaders = config.headers;
+
+    if (utils.isFormData(requestData)) {
+      delete requestHeaders['Content-Type']; // Let the browser set it
+    }
+
+    var request = new XMLHttpRequest();
+    var loadEvent = 'onreadystatechange';
+    var xDomain = false;
+
+    // For IE 8/9 CORS support
+    // Only supports POST and GET calls and doesn't returns the response headers.
+    // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
+    if ("development" !== 'test' &&
+        typeof window !== 'undefined' &&
+        window.XDomainRequest && !('withCredentials' in request) &&
+        !isURLSameOrigin(config.url)) {
+      request = new window.XDomainRequest();
+      loadEvent = 'onload';
+      xDomain = true;
+      request.onprogress = function handleProgress() {};
+      request.ontimeout = function handleTimeout() {};
+    }
+
+    // HTTP basic authentication
+    if (config.auth) {
+      var username = config.auth.username || '';
+      var password = config.auth.password || '';
+      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+    }
+
+    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+
+    // Set the request timeout in MS
+    request.timeout = config.timeout;
+
+    // Listen for ready state
+    request[loadEvent] = function handleLoad() {
+      if (!request || (request.readyState !== 4 && !xDomain)) {
+        return;
+      }
+
+      // The request errored out and we didn't get a response, this will be
+      // handled by onerror instead
+      // With one exception: request that using file: protocol, most browsers
+      // will return status as 0 even though it's a successful request
+      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+        return;
+      }
+
+      // Prepare the response
+      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+      var response = {
+        data: responseData,
+        // IE sends 1223 instead of 204 (https://github.com/axios/axios/issues/201)
+        status: request.status === 1223 ? 204 : request.status,
+        statusText: request.status === 1223 ? 'No Content' : request.statusText,
+        headers: responseHeaders,
+        config: config,
+        request: request
+      };
+
+      settle(resolve, reject, response);
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle low level network errors
+    request.onerror = function handleError() {
+      // Real errors are hidden from us by the browser
+      // onerror should only fire if it's a network error
+      reject(createError('Network Error', config, null, request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle timeout
+    request.ontimeout = function handleTimeout() {
+      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
+        request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Add xsrf header
+    // This is only done if running in a standard browser environment.
+    // Specifically not if we're in a web worker, or react-native.
+    if (utils.isStandardBrowserEnv()) {
+      var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
+
+      // Add xsrf header
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+          cookies.read(config.xsrfCookieName) :
+          undefined;
+
+      if (xsrfValue) {
+        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+      }
+    }
+
+    // Add headers to the request
+    if ('setRequestHeader' in request) {
+      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+          // Remove Content-Type if data is undefined
+          delete requestHeaders[key];
+        } else {
+          // Otherwise add header to the request
+          request.setRequestHeader(key, val);
+        }
+      });
+    }
+
+    // Add withCredentials to request if needed
+    if (config.withCredentials) {
+      request.withCredentials = true;
+    }
+
+    // Add responseType to request if needed
+    if (config.responseType) {
+      try {
+        request.responseType = config.responseType;
+      } catch (e) {
+        // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
+        // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
+        if (config.responseType !== 'json') {
+          throw e;
+        }
+      }
+    }
+
+    // Handle progress if needed
+    if (typeof config.onDownloadProgress === 'function') {
+      request.addEventListener('progress', config.onDownloadProgress);
+    }
+
+    // Not all browsers support upload events
+    if (typeof config.onUploadProgress === 'function' && request.upload) {
+      request.upload.addEventListener('progress', config.onUploadProgress);
+    }
+
+    if (config.cancelToken) {
+      // Handle cancellation
+      config.cancelToken.promise.then(function onCanceled(cancel) {
+        if (!request) {
+          return;
+        }
+
+        request.abort();
+        reject(cancel);
+        // Clean up request
+        request = null;
+      });
+    }
+
+    if (requestData === undefined) {
+      requestData = null;
+    }
+
+    // Send the request
+    request.send(requestData);
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/axios.js":
+/*!*****************************************!*\
+  !*** ./node_modules/axios/lib/axios.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
+var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
+var Axios = __webpack_require__(/*! ./core/Axios */ "./node_modules/axios/lib/core/Axios.js");
+var defaults = __webpack_require__(/*! ./defaults */ "./node_modules/axios/lib/defaults.js");
+
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */
+function createInstance(defaultConfig) {
+  var context = new Axios(defaultConfig);
+  var instance = bind(Axios.prototype.request, context);
+
+  // Copy axios.prototype to instance
+  utils.extend(instance, Axios.prototype, context);
+
+  // Copy context to instance
+  utils.extend(instance, context);
+
+  return instance;
+}
+
+// Create the default instance to be exported
+var axios = createInstance(defaults);
+
+// Expose Axios class to allow class inheritance
+axios.Axios = Axios;
+
+// Factory for creating new instances
+axios.create = function create(instanceConfig) {
+  return createInstance(utils.merge(defaults, instanceConfig));
+};
+
+// Expose Cancel & CancelToken
+axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ "./node_modules/axios/lib/cancel/CancelToken.js");
+axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
+
+// Expose all/spread
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios/lib/helpers/spread.js");
+
+module.exports = axios;
+
+// Allow use of default import syntax in TypeScript
+module.exports.default = axios;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/Cancel.js":
+/*!*************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */
+function Cancel(message) {
+  this.message = message;
+}
+
+Cancel.prototype.toString = function toString() {
+  return 'Cancel' + (this.message ? ': ' + this.message : '');
+};
+
+Cancel.prototype.__CANCEL__ = true;
+
+module.exports = Cancel;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/CancelToken.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Cancel = __webpack_require__(/*! ./Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */
+function CancelToken(executor) {
+  if (typeof executor !== 'function') {
+    throw new TypeError('executor must be a function.');
+  }
+
+  var resolvePromise;
+  this.promise = new Promise(function promiseExecutor(resolve) {
+    resolvePromise = resolve;
+  });
+
+  var token = this;
+  executor(function cancel(message) {
+    if (token.reason) {
+      // Cancellation has already been requested
+      return;
+    }
+
+    token.reason = new Cancel(message);
+    resolvePromise(token.reason);
+  });
+}
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+  if (this.reason) {
+    throw this.reason;
+  }
+};
+
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */
+CancelToken.source = function source() {
+  var cancel;
+  var token = new CancelToken(function executor(c) {
+    cancel = c;
+  });
+  return {
+    token: token,
+    cancel: cancel
+  };
+};
+
+module.exports = CancelToken;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/isCancel.js":
+/*!***************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function isCancel(value) {
+  return !!(value && value.__CANCEL__);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/Axios.js":
+/*!**********************************************!*\
+  !*** ./node_modules/axios/lib/core/Axios.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var defaults = __webpack_require__(/*! ./../defaults */ "./node_modules/axios/lib/defaults.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ "./node_modules/axios/lib/core/InterceptorManager.js");
+var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ "./node_modules/axios/lib/core/dispatchRequest.js");
+
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */
+function Axios(instanceConfig) {
+  this.defaults = instanceConfig;
+  this.interceptors = {
+    request: new InterceptorManager(),
+    response: new InterceptorManager()
+  };
+}
+
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */
+Axios.prototype.request = function request(config) {
+  /*eslint no-param-reassign:0*/
+  // Allow for axios('example/url'[, config]) a la fetch API
+  if (typeof config === 'string') {
+    config = utils.merge({
+      url: arguments[0]
+    }, arguments[1]);
+  }
+
+  config = utils.merge(defaults, {method: 'get'}, this.defaults, config);
+  config.method = config.method.toLowerCase();
+
+  // Hook up interceptors middleware
+  var chain = [dispatchRequest, undefined];
+  var promise = Promise.resolve(config);
+
+  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+    chain.unshift(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+    chain.push(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  while (chain.length) {
+    promise = promise.then(chain.shift(), chain.shift());
+  }
+
+  return promise;
+};
+
+// Provide aliases for supported request methods
+utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, config) {
+    return this.request(utils.merge(config || {}, {
+      method: method,
+      url: url
+    }));
+  };
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, data, config) {
+    return this.request(utils.merge(config || {}, {
+      method: method,
+      url: url,
+      data: data
+    }));
+  };
+});
+
+module.exports = Axios;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/InterceptorManager.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+function InterceptorManager() {
+  this.handlers = [];
+}
+
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */
+InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+  this.handlers.push({
+    fulfilled: fulfilled,
+    rejected: rejected
+  });
+  return this.handlers.length - 1;
+};
+
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */
+InterceptorManager.prototype.eject = function eject(id) {
+  if (this.handlers[id]) {
+    this.handlers[id] = null;
+  }
+};
+
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */
+InterceptorManager.prototype.forEach = function forEach(fn) {
+  utils.forEach(this.handlers, function forEachHandler(h) {
+    if (h !== null) {
+      fn(h);
+    }
+  });
+};
+
+module.exports = InterceptorManager;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/createError.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/core/createError.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var enhanceError = __webpack_require__(/*! ./enhanceError */ "./node_modules/axios/lib/core/enhanceError.js");
+
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */
+module.exports = function createError(message, config, code, request, response) {
+  var error = new Error(message);
+  return enhanceError(error, config, code, request, response);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/dispatchRequest.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var transformData = __webpack_require__(/*! ./transformData */ "./node_modules/axios/lib/core/transformData.js");
+var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
+var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults.js");
+var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
+var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+}
+
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */
+module.exports = function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+
+  // Support baseURL config
+  if (config.baseURL && !isAbsoluteURL(config.url)) {
+    config.url = combineURLs(config.baseURL, config.url);
+  }
+
+  // Ensure headers exist
+  config.headers = config.headers || {};
+
+  // Transform request data
+  config.data = transformData(
+    config.data,
+    config.headers,
+    config.transformRequest
+  );
+
+  // Flatten headers
+  config.headers = utils.merge(
+    config.headers.common || {},
+    config.headers[config.method] || {},
+    config.headers || {}
+  );
+
+  utils.forEach(
+    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+    function cleanHeaderConfig(method) {
+      delete config.headers[method];
+    }
+  );
+
+  var adapter = config.adapter || defaults.adapter;
+
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+
+    // Transform response data
+    response.data = transformData(
+      response.data,
+      response.headers,
+      config.transformResponse
+    );
+
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel(reason)) {
+      throwIfCancellationRequested(config);
+
+      // Transform response data
+      if (reason && reason.response) {
+        reason.response.data = transformData(
+          reason.response.data,
+          reason.response.headers,
+          config.transformResponse
+        );
+      }
+    }
+
+    return Promise.reject(reason);
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/enhanceError.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/axios/lib/core/enhanceError.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */
+module.exports = function enhanceError(error, config, code, request, response) {
+  error.config = config;
+  if (code) {
+    error.code = code;
+  }
+  error.request = request;
+  error.response = response;
+  return error;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/settle.js":
+/*!***********************************************!*\
+  !*** ./node_modules/axios/lib/core/settle.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var createError = __webpack_require__(/*! ./createError */ "./node_modules/axios/lib/core/createError.js");
+
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */
+module.exports = function settle(resolve, reject, response) {
+  var validateStatus = response.config.validateStatus;
+  // Note: status is not exposed by XDomainRequest
+  if (!response.status || !validateStatus || validateStatus(response.status)) {
+    resolve(response);
+  } else {
+    reject(createError(
+      'Request failed with status code ' + response.status,
+      response.config,
+      null,
+      response.request,
+      response
+    ));
+  }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/transformData.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/transformData.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */
+module.exports = function transformData(data, headers, fns) {
+  /*eslint no-param-reassign:0*/
+  utils.forEach(fns, function transform(fn) {
+    data = fn(data, headers);
+  });
+
+  return data;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/defaults.js":
+/*!********************************************!*\
+  !*** ./node_modules/axios/lib/defaults.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
+var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ "./node_modules/axios/lib/helpers/normalizeHeaderName.js");
+
+var DEFAULT_CONTENT_TYPE = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+};
+
+function setContentTypeIfUnset(headers, value) {
+  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+    headers['Content-Type'] = value;
+  }
+}
+
+function getDefaultAdapter() {
+  var adapter;
+  if (typeof XMLHttpRequest !== 'undefined') {
+    // For browsers use XHR adapter
+    adapter = __webpack_require__(/*! ./adapters/xhr */ "./node_modules/axios/lib/adapters/xhr.js");
+  } else if (typeof process !== 'undefined') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
+  }
+  return adapter;
+}
+
+var defaults = {
+  adapter: getDefaultAdapter(),
+
+  transformRequest: [function transformRequest(data, headers) {
+    normalizeHeaderName(headers, 'Content-Type');
+    if (utils.isFormData(data) ||
+      utils.isArrayBuffer(data) ||
+      utils.isBuffer(data) ||
+      utils.isStream(data) ||
+      utils.isFile(data) ||
+      utils.isBlob(data)
+    ) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+      return data.toString();
+    }
+    if (utils.isObject(data)) {
+      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+      return JSON.stringify(data);
+    }
+    return data;
+  }],
+
+  transformResponse: [function transformResponse(data) {
+    /*eslint no-param-reassign:0*/
+    if (typeof data === 'string') {
+      try {
+        data = JSON.parse(data);
+      } catch (e) { /* Ignore */ }
+    }
+    return data;
+  }],
+
+  /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */
+  timeout: 0,
+
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+  maxContentLength: -1,
+
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  }
+};
+
+defaults.headers = {
+  common: {
+    'Accept': 'application/json, text/plain, */*'
+  }
+};
+
+utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+  defaults.headers[method] = {};
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+
+module.exports = defaults;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/bind.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/bind.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function bind(fn, thisArg) {
+  return function wrap() {
+    var args = new Array(arguments.length);
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i];
+    }
+    return fn.apply(thisArg, args);
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/btoa.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/btoa.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
+
+var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+function E() {
+  this.message = 'String contains an invalid character';
+}
+E.prototype = new Error;
+E.prototype.code = 5;
+E.prototype.name = 'InvalidCharacterError';
+
+function btoa(input) {
+  var str = String(input);
+  var output = '';
+  for (
+    // initialize result and counter
+    var block, charCode, idx = 0, map = chars;
+    // if the next str index does not exist:
+    //   change the mapping table to "="
+    //   check if d has no fractional digits
+    str.charAt(idx | 0) || (map = '=', idx % 1);
+    // "8 - idx % 1 * 8" generates the sequence 2, 4, 6, 8
+    output += map.charAt(63 & block >> 8 - idx % 1 * 8)
+  ) {
+    charCode = str.charCodeAt(idx += 3 / 4);
+    if (charCode > 0xFF) {
+      throw new E();
+    }
+    block = block << 8 | charCode;
+  }
+  return output;
+}
+
+module.exports = btoa;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/buildURL.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+function encode(val) {
+  return encodeURIComponent(val).
+    replace(/%40/gi, '@').
+    replace(/%3A/gi, ':').
+    replace(/%24/g, '$').
+    replace(/%2C/gi, ',').
+    replace(/%20/g, '+').
+    replace(/%5B/gi, '[').
+    replace(/%5D/gi, ']');
+}
+
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */
+module.exports = function buildURL(url, params, paramsSerializer) {
+  /*eslint no-param-reassign:0*/
+  if (!params) {
+    return url;
+  }
+
+  var serializedParams;
+  if (paramsSerializer) {
+    serializedParams = paramsSerializer(params);
+  } else if (utils.isURLSearchParams(params)) {
+    serializedParams = params.toString();
+  } else {
+    var parts = [];
+
+    utils.forEach(params, function serialize(val, key) {
+      if (val === null || typeof val === 'undefined') {
+        return;
+      }
+
+      if (utils.isArray(val)) {
+        key = key + '[]';
+      } else {
+        val = [val];
+      }
+
+      utils.forEach(val, function parseValue(v) {
+        if (utils.isDate(v)) {
+          v = v.toISOString();
+        } else if (utils.isObject(v)) {
+          v = JSON.stringify(v);
+        }
+        parts.push(encode(key) + '=' + encode(v));
+      });
+    });
+
+    serializedParams = parts.join('&');
+  }
+
+  if (serializedParams) {
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+  }
+
+  return url;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/combineURLs.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */
+module.exports = function combineURLs(baseURL, relativeURL) {
+  return relativeURL
+    ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
+    : baseURL;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/cookies.js":
+/*!***************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/cookies.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs support document.cookie
+  (function standardBrowserEnv() {
+    return {
+      write: function write(name, value, expires, path, domain, secure) {
+        var cookie = [];
+        cookie.push(name + '=' + encodeURIComponent(value));
+
+        if (utils.isNumber(expires)) {
+          cookie.push('expires=' + new Date(expires).toGMTString());
+        }
+
+        if (utils.isString(path)) {
+          cookie.push('path=' + path);
+        }
+
+        if (utils.isString(domain)) {
+          cookie.push('domain=' + domain);
+        }
+
+        if (secure === true) {
+          cookie.push('secure');
+        }
+
+        document.cookie = cookie.join('; ');
+      },
+
+      read: function read(name) {
+        var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+        return (match ? decodeURIComponent(match[3]) : null);
+      },
+
+      remove: function remove(name) {
+        this.write(name, '', Date.now() - 86400000);
+      }
+    };
+  })() :
+
+  // Non standard browser env (web workers, react-native) lack needed support.
+  (function nonStandardBrowserEnv() {
+    return {
+      write: function write() {},
+      read: function read() { return null; },
+      remove: function remove() {}
+    };
+  })()
+);
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/isAbsoluteURL.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+module.exports = function isAbsoluteURL(url) {
+  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+  // by any combination of letters, digits, plus, period, or hyphen.
+  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/isURLSameOrigin.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs have full support of the APIs needed to test
+  // whether the request URL is of the same origin as current location.
+  (function standardBrowserEnv() {
+    var msie = /(msie|trident)/i.test(navigator.userAgent);
+    var urlParsingNode = document.createElement('a');
+    var originURL;
+
+    /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+    function resolveURL(url) {
+      var href = url;
+
+      if (msie) {
+        // IE needs attribute set twice to normalize properties
+        urlParsingNode.setAttribute('href', href);
+        href = urlParsingNode.href;
+      }
+
+      urlParsingNode.setAttribute('href', href);
+
+      // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+      return {
+        href: urlParsingNode.href,
+        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+        host: urlParsingNode.host,
+        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+        hostname: urlParsingNode.hostname,
+        port: urlParsingNode.port,
+        pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+                  urlParsingNode.pathname :
+                  '/' + urlParsingNode.pathname
+      };
+    }
+
+    originURL = resolveURL(window.location.href);
+
+    /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+    return function isURLSameOrigin(requestURL) {
+      var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+      return (parsed.protocol === originURL.protocol &&
+            parsed.host === originURL.host);
+    };
+  })() :
+
+  // Non standard browser envs (web workers, react-native) lack needed support.
+  (function nonStandardBrowserEnv() {
+    return function isURLSameOrigin() {
+      return true;
+    };
+  })()
+);
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/normalizeHeaderName.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = function normalizeHeaderName(headers, normalizedName) {
+  utils.forEach(headers, function processHeader(value, name) {
+    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+      headers[normalizedName] = value;
+      delete headers[name];
+    }
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/parseHeaders.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+// Headers whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+var ignoreDuplicateOf = [
+  'age', 'authorization', 'content-length', 'content-type', 'etag',
+  'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
+  'last-modified', 'location', 'max-forwards', 'proxy-authorization',
+  'referer', 'retry-after', 'user-agent'
+];
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */
+module.exports = function parseHeaders(headers) {
+  var parsed = {};
+  var key;
+  var val;
+  var i;
+
+  if (!headers) { return parsed; }
+
+  utils.forEach(headers.split('\n'), function parser(line) {
+    i = line.indexOf(':');
+    key = utils.trim(line.substr(0, i)).toLowerCase();
+    val = utils.trim(line.substr(i + 1));
+
+    if (key) {
+      if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) {
+        return;
+      }
+      if (key === 'set-cookie') {
+        parsed[key] = (parsed[key] ? parsed[key] : []).concat([val]);
+      } else {
+        parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+      }
+    }
+  });
+
+  return parsed;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/spread.js":
+/*!**************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/spread.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */
+module.exports = function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/utils.js":
+/*!*****************************************!*\
+  !*** ./node_modules/axios/lib/utils.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
+var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/is-buffer/index.js");
+
+/*global toString:true*/
+
+// utils is a library of generic helper functions non-specific to axios
+
+var toString = Object.prototype.toString;
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+function isArray(val) {
+  return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */
+function isArrayBuffer(val) {
+  return toString.call(val) === '[object ArrayBuffer]';
+}
+
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */
+function isFormData(val) {
+  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+}
+
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+function isArrayBufferView(val) {
+  var result;
+  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+  }
+  return result;
+}
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+function isString(val) {
+  return typeof val === 'string';
+}
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+function isNumber(val) {
+  return typeof val === 'number';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+function isObject(val) {
+  return val !== null && typeof val === 'object';
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+function isDate(val) {
+  return toString.call(val) === '[object Date]';
+}
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+function isFile(val) {
+  return toString.call(val) === '[object File]';
+}
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+function isBlob(val) {
+  return toString.call(val) === '[object Blob]';
+}
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+function isFunction(val) {
+  return toString.call(val) === '[object Function]';
+}
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+function isStream(val) {
+  return isObject(val) && isFunction(val.pipe);
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+function isURLSearchParams(val) {
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */
+function trim(str) {
+  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+}
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ */
+function isStandardBrowserEnv() {
+  if (typeof navigator !== 'undefined' && navigator.product === 'ReactNative') {
+    return false;
+  }
+  return (
+    typeof window !== 'undefined' &&
+    typeof document !== 'undefined'
+  );
+}
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+function forEach(obj, fn) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  // Force an array if not already something iterable
+  if (typeof obj !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (var i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    for (var key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        fn.call(null, obj[key], key, obj);
+      }
+    }
+  }
+}
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function merge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (typeof result[key] === 'object' && typeof val === 'object') {
+      result[key] = merge(result[key], val);
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */
+function extend(a, b, thisArg) {
+  forEach(b, function assignValue(val, key) {
+    if (thisArg && typeof val === 'function') {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  });
+  return a;
+}
+
+module.exports = {
+  isArray: isArray,
+  isArrayBuffer: isArrayBuffer,
+  isBuffer: isBuffer,
+  isFormData: isFormData,
+  isArrayBufferView: isArrayBufferView,
+  isString: isString,
+  isNumber: isNumber,
+  isObject: isObject,
+  isUndefined: isUndefined,
+  isDate: isDate,
+  isFile: isFile,
+  isBlob: isBlob,
+  isFunction: isFunction,
+  isStream: isStream,
+  isURLSearchParams: isURLSearchParams,
+  isStandardBrowserEnv: isStandardBrowserEnv,
+  forEach: forEach,
+  merge: merge,
+  extend: extend,
+  trim: trim
+};
+
 
 /***/ }),
 
@@ -685,7 +2435,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".card-size-1 {\n  width: 200px;\n  margin: 10px;\n}\n.card-size-2 {\n  width: 420px;\n  margin: 10px;\n}\n.card-size-3 {\n  width: 640px;\n  margin: 10px;\n}\n.card-size-4 {\n  width: 860px;\n  margin: 10px;\n}\n.card-size-5 {\n  width: 1080px;\n  margin: 10px;\n}\n.card-size-6 {\n  width: 1300px;\n  margin: 10px;\n}\n.card-size-7 {\n  width: 1520px;\n  margin: 10px;\n}\n.card-size-8 {\n  width: 1740px;\n  margin: 10px;\n}\n.card-size-9 {\n  width: 1960px;\n  margin: 10px;\n}\n.card-size-10 {\n  width: 2180px;\n  margin: 10px;\n}\n.card-size-11 {\n  width: 2400px;\n  margin: 10px;\n}\n.card-size-12 {\n  width: 2620px;\n  margin: 10px;\n}\n", ""]);
+exports.push([module.i, ".card-size-1 {\n  width: 100px;\n  margin: 10px;\n}\n.card-size-2 {\n  width: 220px;\n  margin: 10px;\n}\n.card-size-3 {\n  width: 340px;\n  margin: 10px;\n}\n.card-size-4 {\n  width: 460px;\n  margin: 10px;\n}\n.card-size-5 {\n  width: 580px;\n  margin: 10px;\n}\n.card-size-6 {\n  width: 700px;\n  margin: 10px;\n}\n.card-size-7 {\n  width: 820px;\n  margin: 10px;\n}\n.card-size-8 {\n  width: 940px;\n  margin: 10px;\n}\n.card-size-9 {\n  width: 1060px;\n  margin: 10px;\n}\n.card-size-10 {\n  width: 1180px;\n  margin: 10px;\n}\n.card-size-11 {\n  width: 1300px;\n  margin: 10px;\n}\n.card-size-12 {\n  width: 1420px;\n  margin: 10px;\n}\n", ""]);
 
 // exports
 
@@ -704,7 +2454,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n.ResultArea {\n  margin-top: 60px;\n  width: 100vw;\n  min-height: 40vh;\n  box-sizing: border-box;\n  padding: 30px;\n}\n.grid {\n  position: relative;\n  box-sizing: border-box;\n}\n.grid .item {\n  display: block;\n  position: absolute;\n  margin: 5px;\n  z-index: 1;\n}\n.grid .item .muuri-item-dragging {\n  z-index: 3;\n}\n.grid .item .muuri-item-releasing {\n  z-index: 2;\n}\n.grid .item .muuri-item-hidden {\n  z-index: 0;\n}\n.grid .item .item-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", ""]);
+exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon svg {\n  height: 30px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n.ResultArea {\n  margin-top: 60px;\n  width: 100vw;\n  min-height: 40vh;\n  box-sizing: border-box;\n  padding: 30px;\n}\n.grid {\n  position: relative;\n  box-sizing: border-box;\n}\n.grid .item {\n  display: block;\n  position: absolute;\n  margin: 5px;\n  z-index: 1;\n}\n.grid .item .muuri-item-dragging {\n  z-index: 3;\n}\n.grid .item .muuri-item-releasing {\n  z-index: 2;\n}\n.grid .item .muuri-item-hidden {\n  z-index: 0;\n}\n.grid .item .item-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", ""]);
 
 // exports
 
@@ -723,26 +2473,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/less-loader/dist/cjs.js!./client/src/components/SearchPage.less":
-/*!****************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js!./client/src/components/SearchPage.less ***!
-  \****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".SearchPage {\n  width: 100vh;\n  height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n}\n", ""]);
+exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon svg {\n  height: 30px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n", ""]);
 
 // exports
 
@@ -761,7 +2492,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\n  box-sizing: border-box;\n  margin: 0px;\n  padding: 0px;\n  font: caption;\n  width: 100vw;\n}\n#root {\n  width: 100%;\n  height: 100%;\n  padding: 0px;\n  margin: 0px;\n}\n", ""]);
+exports.push([module.i, "body {\n  box-sizing: border-box;\n  margin: 0px;\n  padding: 0px;\n  font: caption;\n  width: 100vw;\n}\n#root {\n  width: 100%;\n  height: 100%;\n  padding: 0px;\n  margin: 0px;\n}\n.st0 {\n  fill: #474538;\n}\n.st1 {\n  fill: #4A9452;\n}\n.st2 {\n  fill: #70AB52;\n}\n", ""]);
 
 // exports
 
@@ -3502,6 +5233,38 @@ if (true) {
 } else {}
 
 })(window, document, 'Hammer');
+
+
+/***/ }),
+
+/***/ "./node_modules/is-buffer/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/is-buffer/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+// The _isBuffer check is for Safari 5-7 support, because it's missing
+// Object.prototype.constructor. Remove this eventually
+module.exports = function (obj) {
+  return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
+}
+
+function isBuffer (obj) {
+  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+}
+
+// For Node v0.10 support. Remove this eventually.
+function isSlowBuffer (obj) {
+  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
+}
 
 
 /***/ }),
@@ -9222,6 +10985,201 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 	return to;
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/process/browser.js":
+/*!*****************************************!*\
+  !*** ./node_modules/process/browser.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
 
 
 /***/ }),

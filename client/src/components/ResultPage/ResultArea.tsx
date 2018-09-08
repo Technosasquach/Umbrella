@@ -3,6 +3,7 @@ import * as React from "react";
 import "./ResultArea.less";
 
 import TemplateCard from "./APICards/TemplateCard";
+import WildlifeCard from "./APICards/WildlifeCard";
 
 // declare var Muuri: any;
 const Muuri: any = require("muuri");
@@ -35,14 +36,7 @@ export default class ResultArea extends React.Component {
         return (
             <div className="ResultArea">
                 <div className="grid">
-                    <TemplateCard query={{}}/>
-                    <TemplateCard query={{}}/>
-                    <TemplateCard query={{}}/>
-                    <TemplateCard query={{}}/>
-                    <TemplateCard query={{}}/>
-                    <TemplateCard query={{}}/>
-                    <TemplateCard query={{}}/>
-                    <TemplateCard query={{}}/>
+                    <WildlifeCard query={{}}/>
                     <TemplateCard query={{}}/>
                 </div>
             </div>

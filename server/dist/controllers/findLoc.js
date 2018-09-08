@@ -28,13 +28,11 @@ class findLoc {
                 minLong = coordinates[i][1];
             }
         }
-        
-        // console.log(match);
+        console.log(match);
         var upperLeft = [maxLat, minLong];
         var lowerRight = [minLat, maxLong];
-
         return {
-            shape: match.geometry.coordinates[0][0],
+            shape: match.geometry.coordinates,
             bbox: upperLeft.concat(lowerRight)
         };
     }
