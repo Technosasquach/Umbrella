@@ -1,15 +1,14 @@
 import { Router, Request, Response, NextFunction } from "express";
+import { findLoc } from "./findLoc";
 
 const app = Router();
 
-// app.get("*", (req: Request, res: Response) => {
-    
-// });
-
-app.post("/search/:searchText", (req: Request, res: Response) => {
+app.post("/api/findLoc/absolute/:id", (req: Request, res: Response) => {
+    res.json(findLoc.getGeoFromSuburb(req.params.id));
 });
 
-app.post("/books/:id", (req: Request, res: Response) => {
+app.post("/api/findLoc/fuzzy/:id", (req: Request, res: Response) => {
+    res.json(findLoc.getGeoFromSuburb(req.params.id));
 });
 
 export default app;
