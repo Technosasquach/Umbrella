@@ -24,15 +24,15 @@ export class findLoc {
             minLong = 360;
             
         for(var i = 0; i < coordinates.length; i++){
-            if(coordinates[i][0] > maxLat) {
-                maxLat = coordinates[i][0];
-            } else if(coordinates[i][0] < minLat) {
-                minLat = coordinates[i][0];
+            if(coordinates[i][1] > maxLat) {
+                maxLat = coordinates[i][1];
+            } else if(coordinates[i][1] < minLat) {
+                minLat = coordinates[i][1];
             }
-            if(coordinates[i][1] > maxLong) {
-                maxLong = coordinates[i][1];
-            } else if(coordinates[i][1] < minLong) {
-                minLong = coordinates[i][1]
+            if(coordinates[i][0] > maxLong) {
+                maxLong = coordinates[i][0];
+            } else if(coordinates[i][0] < minLong) {
+                minLong = coordinates[i][0]
             }
         }
         console.log(match)
