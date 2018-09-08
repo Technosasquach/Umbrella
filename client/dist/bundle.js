@@ -157,6 +157,91 @@ exports.default = ResultPage;
 
 /***/ }),
 
+/***/ "./client/src/components/ResultPage/APICards/APICard.less":
+/*!****************************************************************!*\
+  !*** ./client/src/components/ResultPage/APICards/APICard.less ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/less-loader/dist/cjs.js!./APICard.less */ "./node_modules/css-loader/index.js!./node_modules/less-loader/dist/cjs.js!./client/src/components/ResultPage/APICards/APICard.less");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./client/src/components/ResultPage/APICards/TemplateCard.tsx":
+/*!********************************************************************!*\
+  !*** ./client/src/components/ResultPage/APICards/TemplateCard.tsx ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+__webpack_require__(/*! ./APICard.less */ "./client/src/components/ResultPage/APICards/APICard.less");
+var TemplateCard = /** @class */ (function (_super) {
+    __extends(TemplateCard, _super);
+    function TemplateCard(props) {
+        return _super.call(this, props) || this;
+    }
+    TemplateCard.prototype.render = function () {
+        return (React.createElement("div", { className: "item card card-size-2" },
+            " ",
+            React.createElement("div", { className: "card-header" }, "Search: ..."),
+            React.createElement("div", { className: "card-body" },
+                React.createElement("h5", { className: "card-title" }, "Card title"),
+                React.createElement("h6", { className: "card-subtitle mb-2 text-muted" }, "Card subtitle"),
+                React.createElement("p", { className: "card-text" }, "Some quick example text to build on the card title and make up the bulk of the card's content.")),
+            React.createElement("ul", { className: "list-group list-group-flush" },
+                React.createElement("li", { className: "list-group-item" }, "Cras justo odio"),
+                React.createElement("li", { className: "list-group-item" }, "Dapibus ac facilisis in"),
+                React.createElement("li", { className: "list-group-item" }, "Vestibulum at eros")),
+            React.createElement("div", { className: "card-body" },
+                React.createElement("p", { className: "card-text" },
+                    React.createElement("small", { className: "text-muted" }, "Last updated 3 mins ago")),
+                React.createElement("a", { href: "#", className: "card-link" }, "Card link"),
+                React.createElement("a", { href: "#", className: "card-link" }, "Another link")),
+            React.createElement("div", { className: "card-footer" },
+                React.createElement("span", { className: "text-muted text-left" }, "2 days ago"),
+                React.createElement("a", { href: "#", className: "text-right float-right" }, "Dataset"))));
+    };
+    return TemplateCard;
+}(React.Component));
+exports.default = TemplateCard;
+
+
+/***/ }),
+
 /***/ "./client/src/components/ResultPage/ResultArea.less":
 /*!**********************************************************!*\
   !*** ./client/src/components/ResultPage/ResultArea.less ***!
@@ -209,6 +294,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 __webpack_require__(/*! ./ResultArea.less */ "./client/src/components/ResultPage/ResultArea.less");
+var TemplateCard_1 = __webpack_require__(/*! ./APICards/TemplateCard */ "./client/src/components/ResultPage/APICards/TemplateCard.tsx");
 // declare var Muuri: any;
 var Muuri = __webpack_require__(/*! muuri */ "./node_modules/muuri/dist/muuri.js");
 var ResultArea = /** @class */ (function (_super) {
@@ -216,7 +302,7 @@ var ResultArea = /** @class */ (function (_super) {
     function ResultArea(props) {
         var _this = _super.call(this, props) || this;
         _this.arraySizeN = [];
-        for (var i = 0; i < 50; i++) {
+        for (var i = 0; i < 10; i++) {
             _this.arraySizeN.push(i);
         }
         return _this;
@@ -224,30 +310,25 @@ var ResultArea = /** @class */ (function (_super) {
     ResultArea.prototype.componentDidMount = function () {
         var grid = new Muuri('.grid', {
             dragEnabled: true,
-            layout: {
-                fillGaps: true
-            },
+            // layout: {
+            //     fillGaps: true
+            // },
             layoutEasing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
         });
         console.log(grid);
     };
-    ResultArea.prototype.getRandomColor = function () {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    };
     ResultArea.prototype.render = function () {
-        var _this = this;
         return (React.createElement("div", { className: "ResultArea" },
-            React.createElement("div", { className: "grid" }, this.arraySizeN.map(function (val) {
-                var widthN = Math.round(Math.random() * 200 + 20);
-                var heightN = Math.round(Math.random() * 200 + 20);
-                return (React.createElement("div", { className: "item", style: { width: widthN, height: heightN, backgroundColor: _this.getRandomColor() } },
-                    React.createElement("span", null, "Test")));
-            }))));
+            React.createElement("div", { className: "grid" },
+                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(TemplateCard_1.default, { query: {} }),
+                React.createElement(TemplateCard_1.default, { query: {} }))));
     };
     return ResultArea;
 }(React.Component));
@@ -592,6 +673,25 @@ exports.push([module.i, ".ResultPage {\n  width: 100vw;\n  min-height: 100vh;\n 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/less-loader/dist/cjs.js!./client/src/components/ResultPage/APICards/APICard.less":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js!./client/src/components/ResultPage/APICards/APICard.less ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".card-size-1 {\n  width: 200px;\n  margin: 10px;\n}\n.card-size-2 {\n  width: 420px;\n  margin: 10px;\n}\n.card-size-3 {\n  width: 640px;\n  margin: 10px;\n}\n.card-size-4 {\n  width: 860px;\n  margin: 10px;\n}\n.card-size-5 {\n  width: 1080px;\n  margin: 10px;\n}\n.card-size-6 {\n  width: 1300px;\n  margin: 10px;\n}\n.card-size-7 {\n  width: 1520px;\n  margin: 10px;\n}\n.card-size-8 {\n  width: 1740px;\n  margin: 10px;\n}\n.card-size-9 {\n  width: 1960px;\n  margin: 10px;\n}\n.card-size-10 {\n  width: 2180px;\n  margin: 10px;\n}\n.card-size-11 {\n  width: 2400px;\n  margin: 10px;\n}\n.card-size-12 {\n  width: 2620px;\n  margin: 10px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/less-loader/dist/cjs.js!./client/src/components/ResultPage/ResultArea.less":
 /*!***************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js!./client/src/components/ResultPage/ResultArea.less ***!
@@ -604,7 +704,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n.ResultArea {\n  margin-top: 60px;\n  width: 100vw;\n  min-height: 40vh;\n  box-sizing: border-box;\n}\n.grid {\n  position: relative;\n  padding: 60px;\n  box-sizing: border-box;\n}\n.grid .item {\n  display: block;\n  position: absolute;\n  width: 100px;\n  height: 100px;\n  margin: 5px;\n  z-index: 1;\n  border: solid 1px black;\n  border-radius: 3px;\n}\n.grid .item .muuri-item-dragging {\n  z-index: 3;\n}\n.grid .item .muuri-item-releasing {\n  z-index: 2;\n}\n.grid .item .muuri-item-hidden {\n  z-index: 0;\n}\n.grid .item .item-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", ""]);
+exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n.ResultArea {\n  margin-top: 60px;\n  width: 100vw;\n  min-height: 40vh;\n  box-sizing: border-box;\n  padding: 30px;\n}\n.grid {\n  position: relative;\n  box-sizing: border-box;\n}\n.grid .item {\n  display: block;\n  position: absolute;\n  margin: 5px;\n  z-index: 1;\n}\n.grid .item .muuri-item-dragging {\n  z-index: 3;\n}\n.grid .item .muuri-item-releasing {\n  z-index: 2;\n}\n.grid .item .muuri-item-hidden {\n  z-index: 0;\n}\n.grid .item .item-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", ""]);
 
 // exports
 
