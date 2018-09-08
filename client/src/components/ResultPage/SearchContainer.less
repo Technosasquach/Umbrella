@@ -1,0 +1,59 @@
+@navbar-height: 60px;
+@navbar-margin: 15px;
+@import "./../../variables.less";
+
+.SearchContainer {
+    height: @navbar-height;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    z-index: 10;
+    box-sizing: border-box;
+    border-bottom: solid 1px @colour-light;
+    background-color: @bg-main;
+
+    -webkit-box-shadow: 0px 5px 30px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 30px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 30px -10px rgba(0,0,0,0.75);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .SearchIcon {
+
+        padding: @navbar-margin;
+        height: @navbar-height;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        img {
+            width: @navbar-height - (@navbar-margin * 2);
+            height: @navbar-height - (@navbar-margin * 2);
+            margin-right: @navbar-margin;
+        }
+
+        span {
+            font-weight: bolder;
+            font-size: 1.8rem;
+        }
+    }
+
+    .SearchZone {
+
+        flex-grow: 1;
+        box-sizing: border-box;
+
+    }
+
+    .SearchOptions {
+        padding-left: @navbar-margin;
+        padding-right: @navbar-margin;
+        box-sizing: border-box;
+    }
+}
