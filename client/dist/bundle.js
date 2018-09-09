@@ -300,7 +300,7 @@ var Wildlife = /** @class */ (function (_super) {
             xml2js_1.parseString(response.data, function (err, result) {
                 if (err)
                     console.log(err);
-                console.log("Wildlife Response: " + JSON.stringify(result));
+                console.log("Air Quality Response: " + JSON.stringify(result));
                 _this.setState({
                     out: result
                 });
@@ -512,7 +512,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-var xml2js_1 = __webpack_require__(/*! xml2js */ "./node_modules/xml2js/lib/xml2js.js");
+//import { parseString } from "xml2js";
 __webpack_require__(/*! ./APICard.less */ "./client/src/components/ResultPage/APICards/APICard.less");
 var Wildlife = /** @class */ (function (_super) {
     __extends(Wildlife, _super);
@@ -527,46 +527,46 @@ var Wildlife = /** @class */ (function (_super) {
         return _this;
     }
     Wildlife.prototype.changeCallback = function (obj) {
+        var _this = this;
         this.setState({
             dataState: obj
         });
+        var boundBox = JSON.stringify(this.state.dataState.bbox);
+        console.log(("http://environment.ehp.qld.gov.au/species/?op=getprojects&f=json&bbox=" + boundBox).replace(/\s|\[|\]/g, ""));
+        axios_1.default.post('/api/proxy', {
+            url: ("http://environment.ehp.qld.gov.au/species/?op=getprojects&f=json&bbox=" + boundBox).replace(/\s|\[|\]/g, "")
+        }).then(function (response) {
+            console.log("Wildlife Response: " + JSON.stringify(response));
+            _this.setState({
+                out: response
+            });
+            console.log("State Stuff:" + JSON.stringify(_this.state.out["data"]["Project"][0]["ProjectID"]));
+        });
     };
     Wildlife.prototype.componentDidMount = function () {
-        var _this = this;
         this.setState({
             dataState: this.props.frontend.result
-        });
-        axios_1.default.post('/api/proxy', {
-            url: "https://www.ehp.qld.gov.au/cgi-bin/air/xml.php?category=1&region=ALL"
-        }).then(function (response) {
-            xml2js_1.parseString(response.data, function (err, result) {
-                if (err)
-                    console.log(err);
-                console.log("Wildlife Response: " + JSON.stringify(result));
-                _this.setState({
-                    out: result
-                });
-            });
         });
     };
     Wildlife.prototype.render = function () {
         return (React.createElement("div", { className: "item card card-size-2" },
             " ",
             React.createElement("div", { className: "card-header" },
-                React.createElement("span", { className: "text-left" }, "Wildlife")),
+                React.createElement("span", { className: "text-left" }, "Local Project Highlight")),
             React.createElement("div", { className: "card-body" },
-                React.createElement("p", { className: "card-text" },
-                    "?: ",
-                    this.state.out ? "loaded" : "loading")),
-            React.createElement("div", { className: "card-body" },
-                React.createElement("p", { className: "card-text" },
-                    React.createElement("small", { className: "text-muted" },
-                        "Last updated | Date: ",
-                        this.state.out && this.state.out["airdata"] ?
-                            this.state.out["airdata"]["category"][0]["$"]["measurementdate"] +
-                                " | Hour:" +
-                                this.state.out["airdata"]["category"][0]["$"]["measurementhour"] :
-                            "loading")))));
+                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["data"] ?
+                    "Project ID: " + JSON.stringify(this.state.out["data"]["Project"][0]["ProjectID"]) :
+                    "Data is loading Please Wait"),
+                React.createElement("br", null),
+                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["data"] ?
+                    "Project Name: " + JSON.stringify(this.state.out["data"]["Project"][0]["Name"]) :
+                    ""),
+                React.createElement("br", null),
+                React.createElement("br", null),
+                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["data"] ?
+                    "Primary Custodian: " + JSON.stringify(this.state.out["data"]["Project"][0]["CustodianOrganisation"]["Name"]) :
+                    ""),
+                React.createElement("br", null))));
     };
     return Wildlife;
 }(React.Component));
@@ -1070,6 +1070,14 @@ if(false) {}
 
 "use strict";
 
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 var FrontEndController = /** @class */ (function () {
@@ -1082,8 +1090,11 @@ var FrontEndController = /** @class */ (function () {
         var _this = this;
         axios_1.default.post("/api/findLoc/fuzzy/" + text).then(function (response) {
             // console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
-            _this.resultsVisFunc(true);
-            _this.setResult(response.data);
+            axios_1.default.post("/api/findLoc/absolute/" + response.data.properties.qld_loca_2).then(function (response2) {
+                console.log("PRIMARY RESPONSE: " + JSON.stringify(__assign({}, response.data, response2.data)));
+                _this.resultsVisFunc(true);
+                _this.setResult(__assign({}, response.data, response2.data));
+            });
         });
     };
     FrontEndController.prototype.setResult = function (resultObj) {
