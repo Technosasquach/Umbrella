@@ -2,13 +2,13 @@ import * as React from "react";
 
 import "./ResultArea.less";
 
-import TemplateCard from "./APICards/TemplateCard";
+// import TemplateCard from "./APICards/TemplateCard";
 import WildlifeCard from "./APICards/WildlifeCard";
 
 // declare var Muuri: any;
 const Muuri: any = require("muuri");
 
-export default class ResultArea extends React.Component {
+export default class ResultArea extends React.Component<{frontend: any},{}> {
 
     arraySizeN: any[] = [];
 
@@ -36,8 +36,8 @@ export default class ResultArea extends React.Component {
         return (
             <div className="ResultArea">
                 <div className="grid">
-                    <WildlifeCard query={{}}/>
-                    <TemplateCard query={{}}/>
+                    <WildlifeCard frontend={this.props.frontend}/>
+                    {/* <TemplateCard query={{}}/> */}
                 </div>
             </div>
         );

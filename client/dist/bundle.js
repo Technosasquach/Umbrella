@@ -208,8 +208,8 @@ var ResultPage = /** @class */ (function (_super) {
     }
     ResultPage.prototype.render = function () {
         return (React.createElement("div", { className: "ResultPage" },
-            React.createElement(SearchContainer_1.default, null),
-            React.createElement(ResultArea_1.default, null)));
+            React.createElement(SearchContainer_1.default, { frontend: this.props.frontend }),
+            React.createElement(ResultArea_1.default, { frontend: this.props.frontend })));
     };
     return ResultPage;
 }(React.Component));
@@ -245,76 +245,6 @@ var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/li
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
-
-/***/ }),
-
-/***/ "./client/src/components/ResultPage/APICards/TemplateCard.tsx":
-/*!********************************************************************!*\
-  !*** ./client/src/components/ResultPage/APICards/TemplateCard.tsx ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-__webpack_require__(/*! ./APICard.less */ "./client/src/components/ResultPage/APICards/APICard.less");
-var TemplateCard = /** @class */ (function (_super) {
-    __extends(TemplateCard, _super);
-    function TemplateCard(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            isVisible: true
-        };
-        return _this;
-    }
-    TemplateCard.prototype.setVisibilty = function (a) {
-        this.setState({
-            isVisible: a
-        });
-    };
-    TemplateCard.prototype.render = function () {
-        if (this.state.isVisible) {
-            return (React.createElement("div", { className: "item card card-size-2" },
-                " ",
-                React.createElement("div", { className: "card-header" },
-                    React.createElement("span", { className: "text-left" }, "Search...")),
-                React.createElement("div", { className: "card-body" },
-                    React.createElement("h5", { className: "card-title" }, "Card title"),
-                    React.createElement("h6", { className: "card-subtitle mb-2 text-muted" }, "Card subtitle"),
-                    React.createElement("p", { className: "card-text" }, "Some quick example text to build on the card title and make up the bulk of the card's content.")),
-                React.createElement("ul", { className: "list-group list-group-flush" },
-                    React.createElement("li", { className: "list-group-item" }, "Cras justo odio"),
-                    React.createElement("li", { className: "list-group-item" }, "Dapibus ac facilisis in"),
-                    React.createElement("li", { className: "list-group-item" }, "Vestibulum at eros")),
-                React.createElement("div", { className: "card-body" },
-                    React.createElement("p", { className: "card-text" },
-                        React.createElement("small", { className: "text-muted" }, "Last updated 3 mins ago")),
-                    React.createElement("a", { href: "#", className: "card-link" }, "Card link"),
-                    React.createElement("a", { href: "#", className: "card-link" }, "Another link")),
-                React.createElement("div", { className: "card-footer" },
-                    React.createElement("span", { className: "text-muted text-left" }, "2 days ago"),
-                    React.createElement("a", { href: "#", className: "text-right float-right" }, "Dataset"))));
-        }
-        else {
-            return ("");
-        }
-    };
-    return TemplateCard;
-}(React.Component));
-exports.default = TemplateCard;
-
 
 /***/ }),
 
@@ -428,7 +358,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 __webpack_require__(/*! ./ResultArea.less */ "./client/src/components/ResultPage/ResultArea.less");
-var TemplateCard_1 = __webpack_require__(/*! ./APICards/TemplateCard */ "./client/src/components/ResultPage/APICards/TemplateCard.tsx");
+// import TemplateCard from "./APICards/TemplateCard";
 var WildlifeCard_1 = __webpack_require__(/*! ./APICards/WildlifeCard */ "./client/src/components/ResultPage/APICards/WildlifeCard.tsx");
 // declare var Muuri: any;
 var Muuri = __webpack_require__(/*! muuri */ "./node_modules/muuri/dist/muuri.js");
@@ -455,8 +385,7 @@ var ResultArea = /** @class */ (function (_super) {
     ResultArea.prototype.render = function () {
         return (React.createElement("div", { className: "ResultArea" },
             React.createElement("div", { className: "grid" },
-                React.createElement(WildlifeCard_1.default, { query: {} }),
-                React.createElement(TemplateCard_1.default, { query: {} }))));
+                React.createElement(WildlifeCard_1.default, { frontend: this.props.frontend }))));
     };
     return ResultArea;
 }(React.Component));
@@ -516,15 +445,17 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+// import Axios, {AxiosResponse} from "axios";
 __webpack_require__(/*! ./SearchContainer.less */ "./client/src/components/ResultPage/SearchContainer.less");
 var LogoSVG_1 = __webpack_require__(/*! ./../LogoSVG */ "./client/src/components/LogoSVG.tsx");
+// import SearchResults from "./SearchResults";
 var ResultArea = /** @class */ (function (_super) {
     __extends(ResultArea, _super);
     function ResultArea(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            searchArea: ""
+            searchArea: "",
+            searchResults: [{}]
         };
         return _this;
     }
@@ -532,17 +463,46 @@ var ResultArea = /** @class */ (function (_super) {
         this.setState({
             searchArea: event.target.value
         });
+        // if(this.state.searchArea == null || this.state.searchArea == "") {
+        //     this.setState({
+        //         searchResults: [{}]
+        //     });
+        // } else {
+        this.searchResults();
+        // }
+    };
+    ResultArea.prototype.searchResults = function () {
+        // Axios.post(
+        //     "/api/findLoc/suggestions/" + this.state.searchArea
+        // ).then((response: AxiosResponse) => {
+        //     console.log("Search Results: " + JSON.stringify(response.data));
+        //     this.setState({
+        //         searchResults: response.data
+        //     });
+        // })
+        this.props.frontend.doSearch(this.state.searchArea);
     };
     ResultArea.prototype.handleKeyPress = function (event) {
         if (event.key === 'Enter') {
             this.search();
         }
     };
-    ResultArea.prototype.search = function () {
-        console.log("Hello World");
-        axios_1.default.post("/api/findLoc/suggestions/" + this.state.searchArea).then(function (response) {
-            console.log("Response: " + JSON.stringify(response.data));
-        });
+    ResultArea.prototype.search = function (text) {
+        // let foundPlace: string = "";
+        // if(text) {
+        //     foundPlace = text;
+        // } else {
+        //     Axios.post(
+        //         "/api/findLoc/suggestions/" + this.state.searchArea
+        //     ).then((response: AxiosResponse) => {
+        //         foundPlace = response.data[0].name;
+        //     })
+        // }
+        // Axios.post(
+        //     "/api/findLoc/absolute/" + foundPlace
+        // ).then((response: AxiosResponse) => {
+        //     console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
+        // })
     };
     ResultArea.prototype.render = function () {
         var _this = this;
@@ -559,6 +519,118 @@ var ResultArea = /** @class */ (function (_super) {
     return ResultArea;
 }(React.Component));
 exports.default = ResultArea;
+
+
+/***/ }),
+
+/***/ "./client/src/components/SearchPage.less":
+/*!***********************************************!*\
+  !*** ./client/src/components/SearchPage.less ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/less-loader/dist/cjs.js!./SearchPage.less */ "./node_modules/css-loader/index.js!./node_modules/less-loader/dist/cjs.js!./client/src/components/SearchPage.less");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./client/src/components/SearchPage.tsx":
+/*!**********************************************!*\
+  !*** ./client/src/components/SearchPage.tsx ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+__webpack_require__(/*! ./SearchPage.less */ "./client/src/components/SearchPage.less");
+var LogoSVG_1 = __webpack_require__(/*! ./LogoSVG */ "./client/src/components/LogoSVG.tsx");
+var SearchPage = /** @class */ (function (_super) {
+    __extends(SearchPage, _super);
+    function SearchPage(props) {
+        var _this = _super.call(this, props) || this;
+        _this.numb = 0;
+        _this.i = 0;
+        _this.dataObj = [];
+        _this.state = {
+            natureImage: "http://hdqwalls.com/wallpapers/aerial-shot-of-trees-4k-kf.jpg"
+        };
+        return _this;
+    }
+    SearchPage.prototype.componentDidMount = function () {
+        var _this = this;
+        axios_1.default.get("https://pixabay.com/api/" +
+            "?key=10054269-6256a71c360c65721e02ad0f6" +
+            "&q=\"aerial+nature+landscape+summer\"" +
+            "&orientation=\"horizontal\"" +
+            "&editors_choice=\"false\"" +
+            "&min_width=3840" +
+            "&min_height=2160" +
+            "&category=nature").then(function (response) {
+            _this.dataObj = response.data;
+        });
+        this.numb = setInterval(function () {
+            _this.i++;
+            _this.setState({
+                natureImage: _this.dataObj.hits[_this.i]["largeImageURL"]
+            });
+        }, 5000);
+        // Make timer (setInterval), repeat X times
+        // Make request with Axios
+        // setState({ natureImage: <imageURL> })
+    };
+    SearchPage.prototype.componentWillUnmount = function () {
+        clearInterval(this.numb);
+    };
+    SearchPage.prototype.render = function () {
+        return (React.createElement("div", { className: "SearchPage" },
+            React.createElement("div", { className: "SearchContent" },
+                React.createElement("div", { className: "SearchContainer" },
+                    React.createElement("div", { className: "UmbrellaLogo" },
+                        React.createElement(LogoSVG_1.default, null)),
+                    React.createElement("div", { className: "SearchBar" },
+                        React.createElement("div", { className: "input-group mb-3" },
+                            React.createElement("input", { type: "text", className: "form-control form-control-lg", placeholder: "" }),
+                            React.createElement("div", { className: "input-group-append" },
+                                React.createElement("button", { className: "btn btn-info btn-lg", type: "button" }, "Search")))))),
+            React.createElement("div", { className: "SearchBG" },
+                React.createElement("img", { src: this.state.natureImage }))));
+    };
+    return SearchPage;
+}(React.Component));
+exports.default = SearchPage;
 
 
 /***/ }),
@@ -615,8 +687,9 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var react_dom_1 = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-// import SearchPage from "./components/SearchPage";
+var SearchPage_1 = __webpack_require__(/*! ./components/SearchPage */ "./client/src/components/SearchPage.tsx");
 var ResultPage_1 = __webpack_require__(/*! ./components/ResultPage */ "./client/src/components/ResultPage.tsx");
+var controller_1 = __webpack_require__(/*! ./service/controller */ "./client/src/service/controller.ts");
 // import "/node_modules/muuri/dist/muuri.min.js";
 __webpack_require__(/*! ./public/animate.css */ "./client/src/public/animate.css");
 __webpack_require__(/*! ./public/bootstrap.min.css */ "./client/src/public/bootstrap.min.css");
@@ -624,11 +697,26 @@ __webpack_require__(/*! ./index.less */ "./client/src/index.less");
 var Root = /** @class */ (function (_super) {
     __extends(Root, _super);
     function Root(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.frontEndController = new controller_1.FrontEndController();
+        _this.state = {
+            frontEndShow: false
+        };
+        _this.changeFrontendShow = _this.changeFrontendShow.bind(_this);
+        return _this;
     }
+    Root.prototype.componentWillMount = function () {
+        var _this = this;
+        this.frontEndController.mountSetResultsVisibility(this.changeFrontendShow);
+        setTimeout(function () { _this.frontEndController.doSearch("LOGANHOLM"); }, 5000);
+    };
+    Root.prototype.changeFrontendShow = function (bool) {
+        this.setState({
+            frontEndShow: bool
+        });
+    };
     Root.prototype.render = function () {
-        return (React.createElement("div", { className: "app" },
-            React.createElement(ResultPage_1.default, null)));
+        return (React.createElement("div", { className: "app" }, !this.state.frontEndShow ? React.createElement(SearchPage_1.default, null) : React.createElement(ResultPage_1.default, { frontend: this.frontEndController })));
     };
     return Root;
 }(React.Component));
@@ -695,6 +783,51 @@ var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addS
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./client/src/service/controller.ts":
+/*!******************************************!*\
+  !*** ./client/src/service/controller.ts ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+var FrontEndController = /** @class */ (function () {
+    function FrontEndController() {
+        this.result = undefined;
+        this.funcCallbacks = [function () { }];
+        this.resultsVisFunc = function () { };
+    }
+    FrontEndController.prototype.doSearch = function (text) {
+        var _this = this;
+        axios_1.default.post("/api/findLoc/fuzzy/" + text).then(function (response) {
+            console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
+            _this.resultsVisFunc(true);
+            _this.setResult(response.data);
+        });
+    };
+    FrontEndController.prototype.setResult = function (resultObj) {
+        var _this = this;
+        this.result = resultObj;
+        this.funcCallbacks.forEach(function (func) {
+            func(_this.result);
+        });
+    };
+    FrontEndController.prototype.addChangeCallBack = function (func) {
+        this.funcCallbacks.push(func);
+    };
+    FrontEndController.prototype.mountSetResultsVisibility = function (a) {
+        this.resultsVisFunc = a;
+    };
+    return FrontEndController;
+}());
+exports.FrontEndController = FrontEndController;
+
 
 /***/ }),
 
@@ -2454,7 +2587,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon svg {\n  height: 30px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n.ResultArea {\n  margin-top: 60px;\n  width: 100vw;\n  min-height: 40vh;\n  box-sizing: border-box;\n  padding: 30px;\n}\n.grid {\n  position: relative;\n  box-sizing: border-box;\n}\n.grid .item {\n  display: block;\n  position: absolute;\n  margin: 5px;\n  z-index: 1;\n}\n.grid .item .muuri-item-dragging {\n  z-index: 3;\n}\n.grid .item .muuri-item-releasing {\n  z-index: 2;\n}\n.grid .item .muuri-item-hidden {\n  z-index: 0;\n}\n.grid .item .item-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", ""]);
+exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon svg {\n  height: 30px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchZone .SearchResults {\n  position: fixed;\n  top: 45px;\n  left: 0px;\n  border: solid 1px black;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n.ResultArea {\n  margin-top: 60px;\n  width: 100vw;\n  min-height: 40vh;\n  box-sizing: border-box;\n  padding: 30px;\n}\n.grid {\n  position: relative;\n  box-sizing: border-box;\n}\n.grid .item {\n  display: block;\n  position: absolute;\n  margin: 5px;\n  z-index: 1;\n}\n.grid .item .muuri-item-dragging {\n  z-index: 3;\n}\n.grid .item .muuri-item-releasing {\n  z-index: 2;\n}\n.grid .item .muuri-item-hidden {\n  z-index: 0;\n}\n.grid .item .item-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", ""]);
 
 // exports
 
@@ -2473,7 +2606,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon svg {\n  height: 30px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n", ""]);
+exports.push([module.i, ".SearchContainer {\n  height: 60px;\n  width: 100vw;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 10;\n  box-sizing: border-box;\n  border-bottom: solid 1px #EAEAEA;\n  background-color: #FFFFFF;\n  -webkit-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.75);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.SearchContainer .SearchIcon {\n  padding: 15px;\n  height: 60px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchContainer .SearchIcon img {\n  width: 30px;\n  height: 30px;\n  margin-right: 15px;\n}\n.SearchContainer .SearchIcon svg {\n  height: 30px;\n}\n.SearchContainer .SearchIcon span {\n  font-weight: bolder;\n  font-size: 1.8rem;\n}\n.SearchContainer .SearchZone {\n  flex-grow: 1;\n  box-sizing: border-box;\n}\n.SearchContainer .SearchZone .SearchResults {\n  position: fixed;\n  top: 45px;\n  left: 0px;\n  border: solid 1px black;\n}\n.SearchContainer .SearchOptions {\n  padding-left: 15px;\n  padding-right: 15px;\n  box-sizing: border-box;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/less-loader/dist/cjs.js!./client/src/components/SearchPage.less":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js!./client/src/components/SearchPage.less ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".SearchPage {\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n}\n.SearchPage .SearchContent {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n.SearchPage .SearchContent .SearchContainer {\n  min-height: 100px;\n  min-width: 100px;\n  z-index: 1000;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchPage .SearchContent .SearchContainer .SearchBar {\n  padding-left: 50px;\n}\n.SearchPage .SearchContent .SearchContainer .SearchBar input {\n  width: 40rem;\n}\n.SearchPage .SearchContent .SearchContainer .UmbrellaLogo {\n  border-right: 1px solid white ;\n}\n.SearchPage .SearchContent .SearchContainer .UmbrellaLogo svg {\n  height: 5rem;\n  padding-right: 50px;\n}\n.SearchPage .SearchBG {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100vw;\n  height: 100vh;\n  overflow: hidden;\n}\n.SearchPage .SearchBG img {\n  /* Center and scale the image nicely */\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100vh;\n  filter: blur(5px);\n  transform: scale(2);\n}\n", ""]);
 
 // exports
 

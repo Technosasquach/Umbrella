@@ -3,7 +3,7 @@ import Axios, {AxiosResponse} from "axios";
 
 import "./APICard.less";
 
-export default class WildlifeCard extends React.Component<{query: any},{exampleState: any}> {
+export default class WildlifeCard extends React.Component<{frontend: any},{exampleState: any}> {
 
     constructor(props: any) {
         super(props);

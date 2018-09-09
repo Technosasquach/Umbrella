@@ -4,7 +4,7 @@ import "./ResultPage.less";
 import SearchContainer from "./ResultPage/SearchContainer";
 import ResultArea from "./ResultPage/ResultArea";
 
-export default class ResultPage extends React.Component {
+export default class ResultPage extends React.Component<{frontend: any},{}> {
 
     constructor(props: any) {
         super(props);
@@ -13,8 +13,8 @@ export default class ResultPage extends React.Component {
     render() {
         return (
             <div className="ResultPage">
-                <SearchContainer/>
-                <ResultArea/>
+                <SearchContainer frontend={this.props.frontend}/>
+                <ResultArea frontend={this.props.frontend}/>
             </div>
         );
     }
