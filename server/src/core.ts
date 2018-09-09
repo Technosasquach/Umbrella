@@ -46,6 +46,30 @@ if (app.get("env") === "production") {
     app.locals.pretty = true;
 }
 
+
+
+
+import { Index } from "elasticlunr";
+export const elastSearch = new Index();
+elastSearch.addField("locID");
+elastSearch.addField("name");
+elastSearch.setRef("id");           // ID
+import * as QLDSub from "./controllers/qld.json";
+(<any>QLDSub).features.forEach((item: any) => {
+    elastSearch.addDoc({
+        id: item.id,
+        locID: item.properties.loc_pid,
+        name: item.properties.qld_loca_2
+    });
+});
+
+// const search: any[] = 
+
+
+
+// console.log(JSON.stringify(results));
+
+
 import routes from "./controllers/routes";
 app.use("/", routes);
 
