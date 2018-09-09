@@ -42,6 +42,21 @@ if (app.get("env") === "production") {
 else {
     app.locals.pretty = true;
 }
+const elasticlunr_1 = require("elasticlunr");
+exports.elastSearch = new elasticlunr_1.Index();
+exports.elastSearch.addField("locID");
+exports.elastSearch.addField("name");
+exports.elastSearch.setRef("id"); // ID
+const QLDSub = require("./controllers/qld.json");
+QLDSub.features.forEach((item) => {
+    exports.elastSearch.addDoc({
+        id: item.id,
+        locID: item.properties.loc_pid,
+        name: item.properties.qld_loca_2
+    });
+});
+// const search: any[] = 
+// console.log(JSON.stringify(results));
 const routes_1 = require("./controllers/routes");
 app.use("/", routes_1.default);
 app.get("*", (req, res) => {

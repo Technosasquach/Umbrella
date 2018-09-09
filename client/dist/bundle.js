@@ -540,7 +540,7 @@ var ResultArea = /** @class */ (function (_super) {
     };
     ResultArea.prototype.search = function () {
         console.log("Hello World");
-        axios_1.default.post("/api/findLoc/absolute/" + this.state.searchArea).then(function (response) {
+        axios_1.default.post("/api/findLoc/suggestions/" + this.state.searchArea).then(function (response) {
             console.log("Response: " + JSON.stringify(response.data));
         });
     };

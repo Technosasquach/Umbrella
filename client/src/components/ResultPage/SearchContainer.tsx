@@ -4,12 +4,13 @@ import Axios, {AxiosResponse} from "axios";
 import "./SearchContainer.less";
 import LogoSVG from "./../LogoSVG";
 
-export default class ResultArea extends React.Component<{},{searchArea: string}> {
+export default class ResultArea extends React.Component<{},{searchArea: string, searchResults: any[]}> {
 
     constructor(props: any) {
         super(props);
         this.state = {
-            searchArea: ""
+            searchArea: "",
+            searchResults: [{}]
         }
     }
 
@@ -17,6 +18,19 @@ export default class ResultArea extends React.Component<{},{searchArea: string}>
         this.setState({
             searchArea: event.target.value
         });
+        if(this.state.searchArea == null || this.state.searchArea == "") {
+            this.setState({
+                searchResults: [{}]
+            });
+        } else {
+            Axios.post(
+                "/api/findLoc/suggestions/" + this.state.searchArea
+            ).then((response: AxiosResponse) => {
+                this.setState({
+                    searchResults: response.data
+                });
+            })
+        }
     }
 
     handleKeyPress(event: any) {
@@ -28,7 +42,7 @@ export default class ResultArea extends React.Component<{},{searchArea: string}>
     search() {
         console.log("Hello World");
         Axios.post(
-            "/api/findLoc/absolute/" + this.state.searchArea
+            "/api/findLoc/suggestions/" + this.state.searchArea
         ).then((response: AxiosResponse) => {
             console.log("Response: " + JSON.stringify(response.data));
         })
@@ -52,6 +66,11 @@ export default class ResultArea extends React.Component<{},{searchArea: string}>
                     </input>
                     <div className="input-group-append">
                         <button className="btn btn-outline-primary">Search!</button>
+                    </div>
+                    <div className="">
+                        {this.state.searchResults.map(() => {
+                            
+                        })}
                     </div>
                 </div>
                 <div className="SearchOptions">
