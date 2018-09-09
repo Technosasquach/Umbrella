@@ -28,7 +28,7 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({}),
         new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks 
         new HtmlWebpackPlugin({
-            title: "Cover This",
+            title: "Umbrella Search",
             meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
             template: path.join(__dirname, 'client/src/template.html'),
         }),
