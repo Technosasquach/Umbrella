@@ -22,18 +22,18 @@ app.post("/api/findLoc/IDtoName/:id", (req, res) => {
 });
 app.post("/api/findLoc/suggestions/:id", (req, res) => {
     const results = search_1.elastSearch.search(req.params.id);
-    console.log("Suggestions | ID: " + req.params.id + " | Results " + JSON.stringify(results));
+    // console.log("Suggestions | ID: " + req.params.id + " | Results " + JSON.stringify(results))
     res.json(results);
 });
 app.post("/api/findLoc/fuzzy/:id", (req, res) => {
     const results = search_1.elastSearch.search(req.params.id);
-    console.log("Fuzzy | ID: " + req.params.id + " | Results " + JSON.stringify(results));
+    // console.log("Fuzzy | ID: " + req.params.id + " | Results " + JSON.stringify(results))
     res.json(search_1.SearchUtil.searchObjToJSONObj(results)[0]);
 });
 app.post("/api/proxy", (req, res) => {
     axios_1.default.get(req.body.url + '' // Stick URL in here
     ).then((response) => {
-        console.log(JSON.stringify(response.data));
+        // console.log(JSON.stringify(response.data))
         res.json(response.data);
     });
 });

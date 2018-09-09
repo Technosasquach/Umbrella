@@ -6,6 +6,7 @@ import "./ResultArea.less";
 import AirSampleCard from "./APICards/AirSampleCard";
 import LandSuitabilityCard from "./APICards/LandSuitabilityCard";
 import WildlifeCard from "./APICards/WildlifeCard";
+import WildlifeCardMulti from "./APICards/WildlifeCardMulti";
 import InfoCard from "./APICards/InfoCard";
 
 // declare var Muuri: any;
@@ -43,6 +44,7 @@ export default class ResultArea extends React.Component<{frontend: any},{}> {
                     <AirSampleCard frontend={this.props.frontend}/>
                     <LandSuitabilityCard frontend={this.props.frontend}/>
                     <WildlifeCard frontend={this.props.frontend}/>
+                    <WildlifeCardMulti frontend={this.props.frontend}/>
 
                     {/* <TemplateCard query={{}}/> */}
                 </div>

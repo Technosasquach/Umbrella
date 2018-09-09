@@ -46,7 +46,7 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
         return (
             <div className="item card card-size-2"> {/* Set width here */}
                 <div className="card-header">
-                    <span className="text-left">Local Project Highlight</span>
+                    <span className="text-left">Local Projects</span>
                 </div>
                 <div className="card-body">
                     <h5 className="card-title">
@@ -56,21 +56,18 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
                             ""
                         }
                     </h5>
-                    <p className="card-text">
-                        {
-                            this.state.out && this.state.out["data"] ?
-                            "Primary Custodian:" + this.state.out["data"]["Project"][0]["CustodianOrganisation"]["Name"] :
-                            ""
-                        }
-                    </p>
-                    <p className="card-text text-muted">
-                        {
-                            this.state.out && this.state.out["data"] ?  
-                            "Project ID: " + this.state.out["data"]["Project"][0]["ProjectID"] :
-                            "Data is loading Please Wait"
-                        }
-                    </p>
+                    <span className="text-muted"><small>First 8 or less projects</small></span>
                 </div>
+                <ul className="list-group list-group-flush">
+                    { this.state.out && this.state.out["data"] ? 
+                        this.state.out["data"]["Project"].slice(0, 8).map((elm: any) => {
+                            return (
+                                <li className="list-group-item">{elm["Name"]}</li>
+                            )
+                        }) : "Data Loading"
+                    }
+                </ul>
+                
             </div>
         )
     }

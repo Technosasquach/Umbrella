@@ -356,6 +356,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 // import Axios, {AxiosResponse} from "axios";
 __webpack_require__(/*! ./APICard.less */ "./client/src/components/ResultPage/APICards/APICard.less");
+var GoogleMapsLoader = __webpack_require__(/*! google-maps */ "./node_modules/google-maps/lib/Google.js"); // only for common js environments
 var InfoCard = /** @class */ (function (_super) {
     __extends(InfoCard, _super);
     function InfoCard(props) {
@@ -368,14 +369,45 @@ var InfoCard = /** @class */ (function (_super) {
         return _this;
     }
     InfoCard.prototype.changeCallback = function (obj) {
+        var _this = this;
         this.setState({
             dataState: obj
+        });
+        // console.log(JSON.stringify(this.state.dataState));
+        GoogleMapsLoader.KEY = "AIzaSyBdDG1TgRKj9ki8kR6BL-2Ody511-fqRyg";
+        GoogleMapsLoader.LANGUAGE = 'en';
+        GoogleMapsLoader.LIBRARIES = ['geometry', 'drawing', 'places'];
+        GoogleMapsLoader.load(function (google) {
+            var center = {
+                lat: (_this.state.dataState.bbox[0] + _this.state.dataState.bbox[2]) / 2,
+                lng: (_this.state.dataState.bbox[1] + _this.state.dataState.bbox[3]) / 2,
+            };
+            var map = new google.maps.Map(document.getElementById('map'), { zoom: 11, center: center });
+            new google.maps.Marker({ position: center, map: map });
+            var coords = [];
+            _this.state.dataState.shape[0][0].forEach(function (elm) {
+                coords.push({
+                    lat: elm[1],
+                    lng: elm[0]
+                });
+            });
+            console.log("[SOMETHING]" + JSON.stringify(coords));
+            var area = new google.maps.Polygon({
+                path: coords,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+            });
+            area.setMap(map);
         });
     };
     InfoCard.prototype.componentWillMount = function () {
         this.setState({
             dataState: this.props.frontend.result
         });
+        console.log(JSON.stringify(this.state.dataState));
         // Axios.post(
         //     'url'
         // ).then((response: AxiosResponse) => {
@@ -385,11 +417,14 @@ var InfoCard = /** @class */ (function (_super) {
         //     })
         // })
     };
+    InfoCard.prototype.componentDidMount = function () {
+    };
     InfoCard.prototype.render = function () {
         return (React.createElement("div", { className: "item card card-size-4" },
             " ",
             React.createElement("div", { className: "card-header" },
                 React.createElement("span", { className: "text-left" }, "Search...")),
+            React.createElement("div", { id: "map", style: { width: "100%", height: "400px" } }),
             React.createElement("div", { className: "card-body" },
                 React.createElement("p", { className: "card-text" },
                     "Location: ",
@@ -554,19 +589,96 @@ var Wildlife = /** @class */ (function (_super) {
             React.createElement("div", { className: "card-header" },
                 React.createElement("span", { className: "text-left" }, "Local Project Highlight")),
             React.createElement("div", { className: "card-body" },
-                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["data"] ?
-                    "Project ID: " + JSON.stringify(this.state.out["data"]["Project"][0]["ProjectID"]) :
-                    "Data is loading Please Wait"),
-                React.createElement("br", null),
-                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["data"] ?
-                    "Project Name: " + JSON.stringify(this.state.out["data"]["Project"][0]["Name"]) :
+                React.createElement("h5", { className: "card-title" }, this.state.out && this.state.out["data"] ?
+                    this.state.out["data"]["Project"][0]["Name"] :
                     ""),
-                React.createElement("br", null),
-                React.createElement("br", null),
-                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["data"] ?
-                    "Primary Custodian: " + JSON.stringify(this.state.out["data"]["Project"][0]["CustodianOrganisation"]["Name"]) :
+                React.createElement("p", { className: "card-text" }, this.state.out && this.state.out["data"] ?
+                    "Primary Custodian:" + this.state.out["data"]["Project"][0]["CustodianOrganisation"]["Name"] :
                     ""),
-                React.createElement("br", null))));
+                React.createElement("p", { className: "card-text text-muted" }, this.state.out && this.state.out["data"] ?
+                    "Project ID: " + this.state.out["data"]["Project"][0]["ProjectID"] :
+                    "Data is loading Please Wait"))));
+    };
+    return Wildlife;
+}(React.Component));
+exports.default = Wildlife;
+
+
+/***/ }),
+
+/***/ "./client/src/components/ResultPage/APICards/WildlifeCardMulti.tsx":
+/*!*************************************************************************!*\
+  !*** ./client/src/components/ResultPage/APICards/WildlifeCardMulti.tsx ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+//import { parseString } from "xml2js";
+__webpack_require__(/*! ./APICard.less */ "./client/src/components/ResultPage/APICards/APICard.less");
+var Wildlife = /** @class */ (function (_super) {
+    __extends(Wildlife, _super);
+    function Wildlife(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            dataState: "",
+            out: ""
+        };
+        _this.changeCallback = _this.changeCallback.bind(_this);
+        _this.props.frontend.addChangeCallBack(_this.changeCallback);
+        return _this;
+    }
+    Wildlife.prototype.changeCallback = function (obj) {
+        var _this = this;
+        this.setState({
+            dataState: obj
+        });
+        var boundBox = JSON.stringify(this.state.dataState.bbox);
+        console.log(("http://environment.ehp.qld.gov.au/species/?op=getprojects&f=json&bbox=" + boundBox).replace(/\s|\[|\]/g, ""));
+        axios_1.default.post('/api/proxy', {
+            url: ("http://environment.ehp.qld.gov.au/species/?op=getprojects&f=json&bbox=" + boundBox).replace(/\s|\[|\]/g, "")
+        }).then(function (response) {
+            console.log("Wildlife Response: " + JSON.stringify(response));
+            _this.setState({
+                out: response
+            });
+            console.log("State Stuff:" + JSON.stringify(_this.state.out["data"]["Project"][0]["ProjectID"]));
+        });
+    };
+    Wildlife.prototype.componentDidMount = function () {
+        this.setState({
+            dataState: this.props.frontend.result
+        });
+    };
+    Wildlife.prototype.render = function () {
+        return (React.createElement("div", { className: "item card card-size-2" },
+            " ",
+            React.createElement("div", { className: "card-header" },
+                React.createElement("span", { className: "text-left" }, "Local Projects")),
+            React.createElement("div", { className: "card-body" },
+                React.createElement("h5", { className: "card-title" }, this.state.out && this.state.out["data"] ?
+                    this.state.out["data"]["Project"][0]["Name"] :
+                    ""),
+                React.createElement("span", { className: "text-muted" },
+                    React.createElement("small", null, "First 8 or less projects"))),
+            React.createElement("ul", { className: "list-group list-group-flush" }, this.state.out && this.state.out["data"] ?
+                this.state.out["data"]["Project"].slice(0, 8).map(function (elm) {
+                    return (React.createElement("li", { className: "list-group-item" }, elm["Name"]));
+                }) : "Data Loading")));
     };
     return Wildlife;
 }(React.Component));
@@ -631,6 +743,7 @@ __webpack_require__(/*! ./ResultArea.less */ "./client/src/components/ResultPage
 var AirSampleCard_1 = __webpack_require__(/*! ./APICards/AirSampleCard */ "./client/src/components/ResultPage/APICards/AirSampleCard.tsx");
 var LandSuitabilityCard_1 = __webpack_require__(/*! ./APICards/LandSuitabilityCard */ "./client/src/components/ResultPage/APICards/LandSuitabilityCard.tsx");
 var WildlifeCard_1 = __webpack_require__(/*! ./APICards/WildlifeCard */ "./client/src/components/ResultPage/APICards/WildlifeCard.tsx");
+var WildlifeCardMulti_1 = __webpack_require__(/*! ./APICards/WildlifeCardMulti */ "./client/src/components/ResultPage/APICards/WildlifeCardMulti.tsx");
 var InfoCard_1 = __webpack_require__(/*! ./APICards/InfoCard */ "./client/src/components/ResultPage/APICards/InfoCard.tsx");
 // declare var Muuri: any;
 var Muuri = __webpack_require__(/*! muuri */ "./node_modules/muuri/dist/muuri.js");
@@ -660,7 +773,8 @@ var ResultArea = /** @class */ (function (_super) {
                 React.createElement(InfoCard_1.default, { frontend: this.props.frontend }),
                 React.createElement(AirSampleCard_1.default, { frontend: this.props.frontend }),
                 React.createElement(LandSuitabilityCard_1.default, { frontend: this.props.frontend }),
-                React.createElement(WildlifeCard_1.default, { frontend: this.props.frontend }))));
+                React.createElement(WildlifeCard_1.default, { frontend: this.props.frontend }),
+                React.createElement(WildlifeCardMulti_1.default, { frontend: this.props.frontend }))));
     };
     return ResultArea;
 }(React.Component));
@@ -5433,6 +5547,240 @@ function isObject(arg) {
 function isUndefined(arg) {
   return arg === void 0;
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/google-maps/lib/Google.js":
+/*!************************************************!*\
+  !*** ./node_modules/google-maps/lib/Google.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
+
+	if (root === null) {
+		throw new Error('Google-maps package can be used only in browser');
+	}
+
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+				__WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+
+})(typeof window !== 'undefined' ? window : null, function() {
+
+
+	'use strict';
+
+
+	var googleVersion = '3.31';
+
+	var script = null;
+
+	var google = null;
+
+	var loading = false;
+
+	var callbacks = [];
+
+	var onLoadEvents = [];
+
+	var originalCreateLoaderMethod = null;
+
+
+	var GoogleMapsLoader = {};
+
+
+	GoogleMapsLoader.URL = 'https://maps.googleapis.com/maps/api/js';
+
+	GoogleMapsLoader.KEY = null;
+
+	GoogleMapsLoader.LIBRARIES = [];
+
+	GoogleMapsLoader.CLIENT = null;
+
+	GoogleMapsLoader.CHANNEL = null;
+
+	GoogleMapsLoader.LANGUAGE = null;
+
+	GoogleMapsLoader.REGION = null;
+
+	GoogleMapsLoader.VERSION = googleVersion;
+
+	GoogleMapsLoader.WINDOW_CALLBACK_NAME = '__google_maps_api_provider_initializator__';
+
+
+	GoogleMapsLoader._googleMockApiObject = {};
+
+
+	GoogleMapsLoader.load = function(fn) {
+		if (google === null) {
+			if (loading === true) {
+				if (fn) {
+					callbacks.push(fn);
+				}
+			} else {
+				loading = true;
+
+				window[GoogleMapsLoader.WINDOW_CALLBACK_NAME] = function() {
+					ready(fn);
+				};
+
+				GoogleMapsLoader.createLoader();
+			}
+		} else if (fn) {
+			fn(google);
+		}
+	};
+
+
+	GoogleMapsLoader.createLoader = function() {
+		script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = GoogleMapsLoader.createUrl();
+
+		document.body.appendChild(script);
+	};
+
+
+	GoogleMapsLoader.isLoaded = function() {
+		return google !== null;
+	};
+
+
+	GoogleMapsLoader.createUrl = function() {
+		var url = GoogleMapsLoader.URL;
+
+		url += '?callback=' + GoogleMapsLoader.WINDOW_CALLBACK_NAME;
+
+		if (GoogleMapsLoader.KEY) {
+			url += '&key=' + GoogleMapsLoader.KEY;
+		}
+
+		if (GoogleMapsLoader.LIBRARIES.length > 0) {
+			url += '&libraries=' + GoogleMapsLoader.LIBRARIES.join(',');
+		}
+
+		if (GoogleMapsLoader.CLIENT) {
+			url += '&client=' + GoogleMapsLoader.CLIENT;
+		}
+
+		if (GoogleMapsLoader.CHANNEL) {
+			url += '&channel=' + GoogleMapsLoader.CHANNEL;
+		}
+
+		if (GoogleMapsLoader.LANGUAGE) {
+			url += '&language=' + GoogleMapsLoader.LANGUAGE;
+		}
+
+		if (GoogleMapsLoader.REGION) {
+			url += '&region=' + GoogleMapsLoader.REGION;
+		}
+
+		if (GoogleMapsLoader.VERSION) {
+			url += '&v=' + GoogleMapsLoader.VERSION;
+		}
+
+		return url;
+	};
+
+
+	GoogleMapsLoader.release = function(fn) {
+		var release = function() {
+			GoogleMapsLoader.KEY = null;
+			GoogleMapsLoader.LIBRARIES = [];
+			GoogleMapsLoader.CLIENT = null;
+			GoogleMapsLoader.CHANNEL = null;
+			GoogleMapsLoader.LANGUAGE = null;
+			GoogleMapsLoader.REGION = null;
+			GoogleMapsLoader.VERSION = googleVersion;
+
+			google = null;
+			loading = false;
+			callbacks = [];
+			onLoadEvents = [];
+
+			if (typeof window.google !== 'undefined') {
+				delete window.google;
+			}
+
+			if (typeof window[GoogleMapsLoader.WINDOW_CALLBACK_NAME] !== 'undefined') {
+				delete window[GoogleMapsLoader.WINDOW_CALLBACK_NAME];
+			}
+
+			if (originalCreateLoaderMethod !== null) {
+				GoogleMapsLoader.createLoader = originalCreateLoaderMethod;
+				originalCreateLoaderMethod = null;
+			}
+
+			if (script !== null) {
+				script.parentElement.removeChild(script);
+				script = null;
+			}
+
+			if (fn) {
+				fn();
+			}
+		};
+
+		if (loading) {
+			GoogleMapsLoader.load(function() {
+				release();
+			});
+		} else {
+			release();
+		}
+	};
+
+
+	GoogleMapsLoader.onLoad = function(fn) {
+		onLoadEvents.push(fn);
+	};
+
+
+	GoogleMapsLoader.makeMock = function() {
+		originalCreateLoaderMethod = GoogleMapsLoader.createLoader;
+
+		GoogleMapsLoader.createLoader = function() {
+			window.google = GoogleMapsLoader._googleMockApiObject;
+			window[GoogleMapsLoader.WINDOW_CALLBACK_NAME]();
+		};
+	};
+
+
+	var ready = function(fn) {
+		var i;
+
+		loading = false;
+
+		if (google === null) {
+			google = window.google;
+		}
+
+		for (i = 0; i < onLoadEvents.length; i++) {
+			onLoadEvents[i](google);
+		}
+
+		if (fn) {
+			fn(google);
+		}
+
+		for (i = 0; i < callbacks.length; i++) {
+			callbacks[i](google);
+		}
+
+		callbacks = [];
+	};
+
+
+	return GoogleMapsLoader;
+
+});
 
 
 /***/ }),
