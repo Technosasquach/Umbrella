@@ -9,7 +9,7 @@ export default class SearchPage extends React.Component<{},{natureImage: string}
     constructor(props: any) {
         super(props);
         this.state = {
-            natureImage: "http://hdqwalls.com/wallpapers/aerial-shot-of-trees-4k-kf.jpg"
+            natureImage: "https://www.architecture.uq.edu.au/filething/get/9464/PHP_P1190899.jpeg"
         }
     }
     
@@ -55,9 +55,9 @@ export default class SearchPage extends React.Component<{},{natureImage: string}
                         </div>
                         <div className= "SearchBar">
                             <div className="input-group mb-3">
-                                <input type="text" className="form-control form-control-lg" placeholder=""></input>
+                                <input type="text" className="form-control form-control-lg" placeholder='Search for "Loganholme"'></input>
                                 <div className="input-group-append">
-                                    <button className="btn btn-info btn-lg" type="button">Search</button>
+                                    <button className="btn btn-success btn-lg" type="button">Search!</button>
                                 </div>
                             </div>
                         </div>
