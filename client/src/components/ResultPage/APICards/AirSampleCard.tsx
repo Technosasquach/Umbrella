@@ -50,14 +50,24 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
                     <span className="text-left">Air Quality</span>
                 </div>
                 <div className="card-body">
-                    <p className="card-text">?: {this.state.out ? "loaded" : "loading"}</p>
+                    <span className="card-text">{this.state.out && this.state.out["airdata"] ?
+                    "Station: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["$"]["name"] :
+                    "Loading... Please Wait"}</span><br/>
+                    <span className="card-text">{this.state.out && this.state.out["airdata"] ?
+                    "Nitrogen: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["measurement"][0]["_"] : ""}</span><br/>
+                    <span className="card-text">{this.state.out && this.state.out["airdata"] ?
+                    "Ozone: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["measurement"][1]["_"] : ""}</span><br/>
+                    <span className="card-text">{this.state.out && this.state.out["airdata"] ?
+                    "PM10: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["measurement"][2]["_"] : ""}</span><br/>
+                    <span className="card-text">{this.state.out && this.state.out["airdata"] ?
+                    "Visibility: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["measurement"][3]["_"] : ""}</span>
                 </div>
                 <div className="card-body">
                     <p className="card-text">
                         <small className="text-muted">Last updated | Date: { 
                             this.state.out && this.state.out["airdata"] ? 
                                 this.state.out["airdata"]["category"][0]["$"]["measurementdate"] + 
-                                " | Hour:" + 
+                                " | Hour: " + 
                                 this.state.out["airdata"]["category"][0]["$"]["measurementhour"] : 
                                 "loading" 
                             }

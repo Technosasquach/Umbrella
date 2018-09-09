@@ -37,8 +37,10 @@ export default class ResultArea extends React.Component<{frontend: any},{}> {
             });
         // console.log(grid);
         setInterval(()=> {
-            grid.refreshItems()
-        }, 2000);
+            grid.refreshItems();
+            grid.refreshSortData();
+            // console.log("Print hello world");
+        }, 1000);
     }
 
     render() {

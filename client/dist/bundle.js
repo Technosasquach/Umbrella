@@ -313,16 +313,28 @@ var Wildlife = /** @class */ (function (_super) {
             React.createElement("div", { className: "card-header" },
                 React.createElement("span", { className: "text-left" }, "Air Quality")),
             React.createElement("div", { className: "card-body" },
-                React.createElement("p", { className: "card-text" },
-                    "?: ",
-                    this.state.out ? "loaded" : "loading")),
+                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["airdata"] ?
+                    "Station: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["$"]["name"] :
+                    "Loading... Please Wait"),
+                React.createElement("br", null),
+                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["airdata"] ?
+                    "Nitrogen: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["measurement"][0]["_"] : ""),
+                React.createElement("br", null),
+                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["airdata"] ?
+                    "Ozone: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["measurement"][1]["_"] : ""),
+                React.createElement("br", null),
+                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["airdata"] ?
+                    "PM10: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["measurement"][2]["_"] : ""),
+                React.createElement("br", null),
+                React.createElement("span", { className: "card-text" }, this.state.out && this.state.out["airdata"] ?
+                    "Visibility: " + this.state.out["airdata"]["category"][0]["region"][0]["station"][0]["measurement"][3]["_"] : "")),
             React.createElement("div", { className: "card-body" },
                 React.createElement("p", { className: "card-text" },
                     React.createElement("small", { className: "text-muted" },
                         "Last updated | Date: ",
                         this.state.out && this.state.out["airdata"] ?
                             this.state.out["airdata"]["category"][0]["$"]["measurementdate"] +
-                                " | Hour:" +
+                                " | Hour: " +
                                 this.state.out["airdata"]["category"][0]["$"]["measurementhour"] :
                             "loading")))));
     };
@@ -868,7 +880,9 @@ var ResultArea = /** @class */ (function (_super) {
         // console.log(grid);
         setInterval(function () {
             grid.refreshItems();
-        }, 2000);
+            grid.refreshSortData();
+            // console.log("Print hello world");
+        }, 1000);
     };
     ResultArea.prototype.render = function () {
         return (React.createElement("div", { className: "ResultArea" },
