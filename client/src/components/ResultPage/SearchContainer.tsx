@@ -6,13 +6,12 @@ import LogoSVG from "./../LogoSVG";
 import { FrontEndController } from "../../service/controller";
 // import SearchResults from "./SearchResults";
 
-export default class ResultArea extends React.Component<{frontend: FrontEndController},{searchArea: string, searchResults: any[]}> {
+export default class ResultArea extends React.Component<{frontend: FrontEndController},{searchArea: string}> {
 
     constructor(props: any) {
         super(props);
         this.state = {
-            searchArea: "",
-            searchResults: [{}]
+            searchArea: ""
         }
     }
 
@@ -20,24 +19,6 @@ export default class ResultArea extends React.Component<{frontend: FrontEndContr
         this.setState({
             searchArea: event.target.value
         });
-        // if(this.state.searchArea == null || this.state.searchArea == "") {
-        //     this.setState({
-        //         searchResults: [{}]
-        //     });
-        // } else {
-        this.searchResults();
-        // }
-    }
-
-    searchResults() {
-        // Axios.post(
-        //     "/api/findLoc/suggestions/" + this.state.searchArea
-        // ).then((response: AxiosResponse) => {
-        //     console.log("Search Results: " + JSON.stringify(response.data));
-        //     this.setState({
-        //         searchResults: response.data
-        //     });
-        // })
     }
 
     handleKeyPress(event: any) {
@@ -47,21 +28,6 @@ export default class ResultArea extends React.Component<{frontend: FrontEndContr
     }
 
     search(text?: string) {
-        // let foundPlace: string = "";
-        // if(text) {
-        //     foundPlace = text;
-        // } else {
-        //     Axios.post(
-        //         "/api/findLoc/suggestions/" + this.state.searchArea
-        //     ).then((response: AxiosResponse) => {
-        //         foundPlace = response.data[0].name;
-        //     })
-        // }
-        // Axios.post(
-        //     "/api/findLoc/absolute/" + foundPlace
-        // ).then((response: AxiosResponse) => {
-        //     console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
-        // })
         this.props.frontend.doSearch(this.state.searchArea);
     }
 
@@ -90,9 +56,9 @@ export default class ResultArea extends React.Component<{frontend: FrontEndContr
                         })}
                     </div> */}
                 </div>
-                <div className="SearchOptions">
+                {/* <div className="SearchOptions">
                     <button className="btn btn-outline-success">Export!</button>
-                </div>
+                </div> */}
             </div>
         );
     }

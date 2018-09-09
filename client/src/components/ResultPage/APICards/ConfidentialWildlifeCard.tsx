@@ -3,7 +3,7 @@ import * as React from "react";
 import "./APICard.less";
 import { FrontEndController } from "../../../service/controller";
 
-export default class Wildlife extends React.Component<{frontend: FrontEndController},{dataState: any, out: any}> {
+export default class ConfidentialWildlifeCard extends React.Component<{frontend: FrontEndController},{dataState: any, out: any}> {
 
     constructor(props: any) {
         super(props);
@@ -31,12 +31,11 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
         return (
             <div className="item card card-size-2"> {/* Set width here */}
                 <div className="card-header">
-                    <span className="text-left">Land Suitability</span>
+                    <span className="text-left">Confidential Wildlife</span>
                 </div>
                 <div className="card-body">
                     <p className="card-text"><b>Reason for no implementation:</b></p>
-                    <p className="card-text">The API requires input of a projectID and/or polygonID to display results. We were not able to identify either parameter with the location data we have</p>
-                    <p className="card-text">This is the exact reason the project exists, to over come this for most people. This is a major issue with the gov supplied APIs and dataset</p>
+                    <p className="card-text">Not enough time, would have been implemented for future deployment. Primary forseen issue is 10km zones to location mapping</p>
                 </div>
             </div>
         )

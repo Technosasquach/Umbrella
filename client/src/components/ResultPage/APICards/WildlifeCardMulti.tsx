@@ -49,13 +49,7 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
                     <span className="text-left">Local Projects</span>
                 </div>
                 <div className="card-body">
-                    <h5 className="card-title">
-                        {
-                            this.state.out && this.state.out["data"] ?
-                            this.state.out["data"]["Project"][0]["Name"] :
-                            ""
-                        }
-                    </h5>
+                    <h5 className="card-title">Local Projects</h5>
                     <span className="text-muted"><small>First 8 or less projects</small></span>
                 </div>
                 <ul className="list-group list-group-flush">

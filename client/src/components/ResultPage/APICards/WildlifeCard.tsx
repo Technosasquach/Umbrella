@@ -56,13 +56,15 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
                             ""
                         }
                     </h5>
-                    <p className="card-text">
-                        {
-                            this.state.out && this.state.out["data"] ?
-                            "Primary Custodian:" + this.state.out["data"]["Project"][0]["CustodianOrganisation"]["Name"] :
-                            ""
-                        }
-                    </p>
+                    {this.state.out && this.state.out["data"] && this.state.out["data"]["Project"][0]["CustodianOrganisation"] ?
+                        <p className="card-text">
+                            {
+                                this.state.out && this.state.out["data"] ?
+                                "Primary Custodian:" + this.state.out["data"]["Project"][0]["CustodianOrganisation"]["Name"] :
+                                ""
+                            }
+                        </p> : "Primary Custodian: N/A"
+                    }
                     <p className="card-text text-muted">
                         {
                             this.state.out && this.state.out["data"] ?  

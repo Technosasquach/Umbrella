@@ -5,8 +5,10 @@ import "./ResultArea.less";
 // import TemplateCard from "./APICards/TemplateCard";
 import AirSampleCard from "./APICards/AirSampleCard";
 import LandSuitabilityCard from "./APICards/LandSuitabilityCard";
+import SoilSuitabilityCard from "./APICards/SoilSuitabilityCard";
 import WildlifeCard from "./APICards/WildlifeCard";
 import WildlifeCardMulti from "./APICards/WildlifeCardMulti";
+import ConfidentialWildlifeCard from "./APICards/ConfidentialWildlifeCard";
 import InfoCard from "./APICards/InfoCard";
 
 // declare var Muuri: any;
@@ -25,7 +27,7 @@ export default class ResultArea extends React.Component<{frontend: any},{}> {
     }
 
     componentDidMount() {
-        new Muuri('.grid', 
+        const grid = new Muuri('.grid', 
             { 
                 dragEnabled: true, 
                 // layout: {
@@ -34,6 +36,9 @@ export default class ResultArea extends React.Component<{frontend: any},{}> {
                 layoutEasing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
             });
         // console.log(grid);
+        setInterval(()=> {
+            grid.refreshItems()
+        }, 2000);
     }
 
     render() {
@@ -42,10 +47,11 @@ export default class ResultArea extends React.Component<{frontend: any},{}> {
                 <div className="grid">
                     <InfoCard frontend={this.props.frontend}/>
                     <AirSampleCard frontend={this.props.frontend}/>
-                    <LandSuitabilityCard frontend={this.props.frontend}/>
                     <WildlifeCard frontend={this.props.frontend}/>
                     <WildlifeCardMulti frontend={this.props.frontend}/>
-
+                    <ConfidentialWildlifeCard frontend={this.props.frontend}/>
+                    <LandSuitabilityCard frontend={this.props.frontend}/>
+                    <SoilSuitabilityCard frontend={this.props.frontend}/>
                     {/* <TemplateCard query={{}}/> */}
                 </div>
             </div>

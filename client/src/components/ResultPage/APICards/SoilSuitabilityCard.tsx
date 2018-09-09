@@ -31,12 +31,11 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
         return (
             <div className="item card card-size-2"> {/* Set width here */}
                 <div className="card-header">
-                    <span className="text-left">Land Suitability</span>
+                    <span className="text-left">Soil Suitability</span>
                 </div>
                 <div className="card-body">
                     <p className="card-text"><b>Reason for no implementation:</b></p>
-                    <p className="card-text">The API requires input of a projectID and/or polygonID to display results. We were not able to identify either parameter with the location data we have</p>
-                    <p className="card-text">This is the exact reason the project exists, to over come this for most people. This is a major issue with the gov supplied APIs and dataset</p>
+                    <p className="card-text">Required an API Key & Registration into "SILO" website. The server and our implementation would currently not work with the specified CORS policy</p>
                 </div>
             </div>
         )
