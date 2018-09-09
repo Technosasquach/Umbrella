@@ -34,7 +34,7 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
         ).then((response: AxiosResponse) => {
             parseString(response.data, (err: any, result: any) => {
                 if(err) console.log(err);
-                console.log("Wildlife Response: " + JSON.stringify(result));
+                console.log("Air Quality Response: " + JSON.stringify(result));
                 this.setState({
                     out: result
                 })

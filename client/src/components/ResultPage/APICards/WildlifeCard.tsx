@@ -1,6 +1,6 @@
 import * as React from "react";
 import Axios, {AxiosResponse} from "axios";
-import { parseString } from "xml2js";
+//import { parseString } from "xml2js";
 
 import "./APICard.less";
 import { FrontEndController } from "../../../service/controller";
@@ -21,48 +21,43 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
         this.setState({
             dataState: obj
         })
+        const boundBox = JSON.stringify(this.state.dataState.bbox);
+        console.log(("http://environment.ehp.qld.gov.au/species/?op=getprojects&f=json&bbox=" + boundBox).replace(/\s|\[|\]/g,""));
+        Axios.post(
+            '/api/proxy', {
+                url: ("http://environment.ehp.qld.gov.au/species/?op=getprojects&f=json&bbox=" + boundBox).replace(/\s|\[|\]/g,"")
+            }
+        ).then((response: AxiosResponse) => {
+            console.log("Wildlife Response: " + JSON.stringify(response));
+            this.setState({
+                out: response
+            });
+            console.log("State Stuff:" + JSON.stringify(this.state.out["data"]["Project"][0]["ProjectID"]));
+        });
     }
 
     componentDidMount() {
         this.setState({
             dataState: this.props.frontend.result
         });
-        Axios.post(
-            '/api/proxy', {
-                url: "https://www.ehp.qld.gov.au/cgi-bin/air/xml.php?category=1&region=ALL"
-            }
-        ).then((response: AxiosResponse) => {
-            parseString(response.data, (err: any, result: any) => {
-                if(err) console.log(err);
-                console.log("Wildlife Response: " + JSON.stringify(result));
-                this.setState({
-                    out: result
-                })
-            });
-            
-        })
     }
 
     render() {
         return (
             <div className="item card card-size-2"> {/* Set width here */}
                 <div className="card-header">
-                    <span className="text-left">Wildlife</span>
+                    <span className="text-left">Local Project Highlight</span>
                 </div>
                 <div className="card-body">
-                    <p className="card-text">?: {this.state.out ? "loaded" : "loading"}</p>
-                </div>
-                <div className="card-body">
-                    <p className="card-text">
-                        <small className="text-muted">Last updated | Date: { 
-                            this.state.out && this.state.out["airdata"] ? 
-                                this.state.out["airdata"]["category"][0]["$"]["measurementdate"] + 
-                                " | Hour:" + 
-                                this.state.out["airdata"]["category"][0]["$"]["measurementhour"] : 
-                                "loading" 
-                            }
-                        </small>
-                    </p>
+                    <span className="card-text">{this.state.out && this.state.out["data"] ? 
+                    "Project ID: " + JSON.stringify(this.state.out["data"]["Project"][0]["ProjectID"]) :
+                    "Data is loading Please Wait"}</span><br/>
+                    <span className="card-text">{this.state.out && this.state.out["data"] ?
+                    "Project Name: " + JSON.stringify(this.state.out["data"]["Project"][0]["Name"]) :
+                    "" }</span><br/><br/>
+                    <span className="card-text">{this.state.out && this.state.out["data"] ?
+                    "Primary Custodian: " + JSON.stringify(this.state.out["data"]["Project"][0]["CustodianOrganisation"]["Name"]) :
+                    ""}</span><br/>
                 </div>
             </div>
         )
