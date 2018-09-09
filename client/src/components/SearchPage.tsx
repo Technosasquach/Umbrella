@@ -2,6 +2,8 @@ import * as React from "react";
 import Axios from "axios";
 import "./SearchPage.less";
 
+import LogoSVG from "./LogoSVG";
+
 export default class SearchPage extends React.Component<{},{natureImage: string}> {
 
     constructor(props: any) {
@@ -19,7 +21,7 @@ export default class SearchPage extends React.Component<{},{natureImage: string}
         Axios.get(
             `https://pixabay.com/api/` +
             `?key=10054269-6256a71c360c65721e02ad0f6` +
-            `&q="nature+aerial"` + 
+            `&q="aerial+nature+landscape+summer"` + 
             `&orientation="horizontal"`+
             `&editors_choice="false"`+
             `&min_width=3840`+
@@ -33,7 +35,7 @@ export default class SearchPage extends React.Component<{},{natureImage: string}
             this.setState({
                 natureImage: this.dataObj.hits[this.i]["largeImageURL"]
             });
-        }, 10000);
+        }, 5000);
         // Make timer (setInterval), repeat X times
             // Make request with Axios
             // setState({ natureImage: <imageURL> })
@@ -48,7 +50,17 @@ export default class SearchPage extends React.Component<{},{natureImage: string}
             <div className="SearchPage">
                 <div className="SearchContent">
                     <div className="SearchContainer">
-                        <input type="text" className="form-control form-control-lg"></input> 
+                        <div className= "UmbrellaLogo">
+                            <LogoSVG/>
+                        </div>
+                        <div className= "SearchBar">
+                            <div className="input-group mb-3">
+                                <input type="text" className="form-control form-control-lg" placeholder=""></input>
+                                <div className="input-group-append">
+                                    <button className="btn btn-info btn-lg" type="button">Search</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="SearchBG">
