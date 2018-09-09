@@ -37,10 +37,10 @@ app.post("/api/findLoc/fuzzy/:id", (req: Request, res: Response) => {
 });
 
 app.post("/api/proxy", (req: Request, res: Response) => {
-    // Header info -> escape to get a pure URL
     Axios.get(
         req.body.url + '' // Stick URL in here
     ).then((response: AxiosResponse) => {
+        console.log(JSON.stringify(response.data))
         res.json(response.data);
     })
 });

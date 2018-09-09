@@ -31,9 +31,9 @@ app.post("/api/findLoc/fuzzy/:id", (req, res) => {
     res.json(search_1.SearchUtil.searchObjToJSONObj(results)[0]);
 });
 app.post("/api/proxy", (req, res) => {
-    // Header info -> escape to get a pure URL
     axios_1.default.get(req.body.url + '' // Stick URL in here
     ).then((response) => {
+        console.log(JSON.stringify(response.data));
         res.json(response.data);
     });
 });

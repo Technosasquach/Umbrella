@@ -24,7 +24,7 @@ export default class Root extends React.Component<{},{frontEndShow: boolean}> {
 
     componentWillMount() {
         this.frontEndController.mountSetResultsVisibility(this.changeFrontendShow);
-        // setTimeout(() => { this.frontEndController.doSearch("LOGAN"); }, 1000);
+        setTimeout(() => { this.frontEndController.doSearch("LOGAN"); }, 1000);
     }
 
     changeFrontendShow(bool: boolean) {

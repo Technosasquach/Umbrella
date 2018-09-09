@@ -47,7 +47,7 @@ export default class Wildlife extends React.Component<{frontend: FrontEndControl
         return (
             <div className="item card card-size-2"> {/* Set width here */}
                 <div className="card-header">
-                    <span className="text-left">Wildlife</span>
+                    <span className="text-left">Air Quality</span>
                 </div>
                 <div className="card-body">
                     <p className="card-text">?: {this.state.out ? "loaded" : "loading"}</p>

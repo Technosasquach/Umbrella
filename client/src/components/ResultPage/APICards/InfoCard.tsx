@@ -37,7 +37,7 @@ export default class InfoCard extends React.Component<{frontend: FrontEndControl
 
     render() {
         return (
-            <div className="item card card-size-2"> {/* Set width here */}
+            <div className="item card card-size-4"> {/* Set width here */}
                 <div className="card-header">
                     <span className="text-left">Search...</span>
                 </div>

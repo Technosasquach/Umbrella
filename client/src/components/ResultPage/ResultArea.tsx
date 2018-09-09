@@ -3,7 +3,9 @@ import * as React from "react";
 import "./ResultArea.less";
 
 // import TemplateCard from "./APICards/TemplateCard";
-// import WildlifeCard from "./APICards/WildlifeCard";
+import AirSampleCard from "./APICards/AirSampleCard";
+import LandSuitabilityCard from "./APICards/LandSuitabilityCard";
+import WildlifeCard from "./APICards/WildlifeCard";
 import InfoCard from "./APICards/InfoCard";
 
 // declare var Muuri: any;
@@ -38,6 +40,9 @@ export default class ResultArea extends React.Component<{frontend: any},{}> {
             <div className="ResultArea">
                 <div className="grid">
                     <InfoCard frontend={this.props.frontend}/>
+                    <AirSampleCard frontend={this.props.frontend}/>
+                    <LandSuitabilityCard frontend={this.props.frontend}/>
+                    <WildlifeCard frontend={this.props.frontend}/>
 
                     {/* <TemplateCard query={{}}/> */}
                 </div>
