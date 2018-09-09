@@ -3,7 +3,8 @@ import * as React from "react";
 import "./ResultArea.less";
 
 // import TemplateCard from "./APICards/TemplateCard";
-import WildlifeCard from "./APICards/WildlifeCard";
+// import WildlifeCard from "./APICards/WildlifeCard";
+import InfoCard from "./APICards/InfoCard";
 
 // declare var Muuri: any;
 const Muuri: any = require("muuri");
@@ -21,7 +22,7 @@ export default class ResultArea extends React.Component<{frontend: any},{}> {
     }
 
     componentDidMount() {
-        const grid = new Muuri('.grid', 
+        new Muuri('.grid', 
             { 
                 dragEnabled: true, 
                 // layout: {
@@ -29,14 +30,15 @@ export default class ResultArea extends React.Component<{frontend: any},{}> {
                 // },
                 layoutEasing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
             });
-        console.log(grid);
+        // console.log(grid);
     }
 
     render() {
         return (
             <div className="ResultArea">
                 <div className="grid">
-                    <WildlifeCard frontend={this.props.frontend}/>
+                    <InfoCard frontend={this.props.frontend}/>
+
                     {/* <TemplateCard query={{}}/> */}
                 </div>
             </div>

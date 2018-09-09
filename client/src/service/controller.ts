@@ -9,7 +9,7 @@ export class FrontEndController {
         Axios.post(
             "/api/findLoc/fuzzy/" + text
         ).then((response: AxiosResponse) => {
-            console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
+            // console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
             this.resultsVisFunc(true);
             this.setResult(response.data);
         })

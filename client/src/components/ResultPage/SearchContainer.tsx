@@ -38,7 +38,6 @@ export default class ResultArea extends React.Component<{frontend: FrontEndContr
         //         searchResults: response.data
         //     });
         // })
-        this.props.frontend.doSearch(this.state.searchArea);
     }
 
     handleKeyPress(event: any) {
@@ -48,7 +47,6 @@ export default class ResultArea extends React.Component<{frontend: FrontEndContr
     }
 
     search(text?: string) {
-        
         // let foundPlace: string = "";
         // if(text) {
         //     foundPlace = text;
@@ -64,6 +62,7 @@ export default class ResultArea extends React.Component<{frontend: FrontEndContr
         // ).then((response: AxiosResponse) => {
         //     console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
         // })
+        this.props.frontend.doSearch(this.state.searchArea);
     }
 
     render() {

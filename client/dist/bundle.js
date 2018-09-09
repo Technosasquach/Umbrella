@@ -248,10 +248,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./client/src/components/ResultPage/APICards/WildlifeCard.tsx":
-/*!********************************************************************!*\
-  !*** ./client/src/components/ResultPage/APICards/WildlifeCard.tsx ***!
-  \********************************************************************/
+/***/ "./client/src/components/ResultPage/APICards/InfoCard.tsx":
+/*!****************************************************************!*\
+  !*** ./client/src/components/ResultPage/APICards/InfoCard.tsx ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -269,39 +269,53 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+// import Axios, {AxiosResponse} from "axios";
 __webpack_require__(/*! ./APICard.less */ "./client/src/components/ResultPage/APICards/APICard.less");
-var WildlifeCard = /** @class */ (function (_super) {
-    __extends(WildlifeCard, _super);
-    function WildlifeCard(props) {
+var InfoCard = /** @class */ (function (_super) {
+    __extends(InfoCard, _super);
+    function InfoCard(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            exampleState: ""
+            dataState: ""
         };
+        _this.changeCallback = _this.changeCallback.bind(_this);
+        _this.props.frontend.addChangeCallBack(_this.changeCallback);
         return _this;
     }
-    WildlifeCard.prototype.componentDidMount = function () {
-        var _this = this;
-        axios_1.default.post('url').then(function (response) {
-            console.log("Response: " + JSON.stringify(response));
-            _this.setState({
-                exampleState: "Hello World"
-            });
+    InfoCard.prototype.changeCallback = function (obj) {
+        this.setState({
+            dataState: obj
         });
     };
-    WildlifeCard.prototype.render = function () {
+    InfoCard.prototype.componentWillMount = function () {
+        this.setState({
+            dataState: this.props.frontend.result
+        });
+        // Axios.post(
+        //     'url'
+        // ).then((response: AxiosResponse) => {
+        //     console.log("InfoCard Response: " + JSON.stringify(response));
+        //     this.setState({
+        //         dataState: response.data
+        //     })
+        // })
+    };
+    InfoCard.prototype.render = function () {
         return (React.createElement("div", { className: "item card card-size-2" },
             " ",
             React.createElement("div", { className: "card-header" },
                 React.createElement("span", { className: "text-left" }, "Search...")),
             React.createElement("div", { className: "card-body" },
-                React.createElement("h5", { className: "card-title" }, "Card title"),
-                React.createElement("h6", { className: "card-subtitle mb-2 text-muted" }, "Card subtitle"),
-                React.createElement("p", { className: "card-text" }, "Some quick example text to build on the card title and make up the bulk of the card's content."))));
+                React.createElement("p", { className: "card-text" },
+                    "Location: ",
+                    this.state.dataState ? this.state.dataState.properties.qld_loca_2 : ""),
+                React.createElement("p", { className: "card-text" },
+                    "Loc ID: ",
+                    this.state.dataState ? this.state.dataState.properties.loc_pid : ""))));
     };
-    return WildlifeCard;
+    return InfoCard;
 }(React.Component));
-exports.default = WildlifeCard;
+exports.default = InfoCard;
 
 
 /***/ }),
@@ -359,7 +373,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 __webpack_require__(/*! ./ResultArea.less */ "./client/src/components/ResultPage/ResultArea.less");
 // import TemplateCard from "./APICards/TemplateCard";
-var WildlifeCard_1 = __webpack_require__(/*! ./APICards/WildlifeCard */ "./client/src/components/ResultPage/APICards/WildlifeCard.tsx");
+// import WildlifeCard from "./APICards/WildlifeCard";
+var InfoCard_1 = __webpack_require__(/*! ./APICards/InfoCard */ "./client/src/components/ResultPage/APICards/InfoCard.tsx");
 // declare var Muuri: any;
 var Muuri = __webpack_require__(/*! muuri */ "./node_modules/muuri/dist/muuri.js");
 var ResultArea = /** @class */ (function (_super) {
@@ -373,19 +388,19 @@ var ResultArea = /** @class */ (function (_super) {
         return _this;
     }
     ResultArea.prototype.componentDidMount = function () {
-        var grid = new Muuri('.grid', {
+        new Muuri('.grid', {
             dragEnabled: true,
             // layout: {
             //     fillGaps: true
             // },
             layoutEasing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
         });
-        console.log(grid);
+        // console.log(grid);
     };
     ResultArea.prototype.render = function () {
         return (React.createElement("div", { className: "ResultArea" },
             React.createElement("div", { className: "grid" },
-                React.createElement(WildlifeCard_1.default, { frontend: this.props.frontend }))));
+                React.createElement(InfoCard_1.default, { frontend: this.props.frontend }))));
     };
     return ResultArea;
 }(React.Component));
@@ -480,7 +495,6 @@ var ResultArea = /** @class */ (function (_super) {
         //         searchResults: response.data
         //     });
         // })
-        this.props.frontend.doSearch(this.state.searchArea);
     };
     ResultArea.prototype.handleKeyPress = function (event) {
         if (event.key === 'Enter') {
@@ -503,6 +517,7 @@ var ResultArea = /** @class */ (function (_super) {
         // ).then((response: AxiosResponse) => {
         //     console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
         // })
+        this.props.frontend.doSearch(this.state.searchArea);
     };
     ResultArea.prototype.render = function () {
         var _this = this;
@@ -585,7 +600,7 @@ var SearchPage = /** @class */ (function (_super) {
         _this.i = 0;
         _this.dataObj = [];
         _this.state = {
-            natureImage: "http://hdqwalls.com/wallpapers/aerial-shot-of-trees-4k-kf.jpg"
+            natureImage: "https://www.architecture.uq.edu.au/filething/get/9464/PHP_P1190899.jpeg"
         };
         return _this;
     }
@@ -615,16 +630,16 @@ var SearchPage = /** @class */ (function (_super) {
         clearInterval(this.numb);
     };
     SearchPage.prototype.render = function () {
-        return (React.createElement("div", { className: "SearchPage" },
-            React.createElement("div", { className: "SearchContent" },
-                React.createElement("div", { className: "SearchContainer" },
+        return (React.createElement("div", { className: "FirstSearchPage" },
+            React.createElement("div", { className: "FirstSearchContent" },
+                React.createElement("div", { className: "FirstSearchContainer" },
                     React.createElement("div", { className: "UmbrellaLogo" },
                         React.createElement(LogoSVG_1.default, null)),
                     React.createElement("div", { className: "SearchBar" },
                         React.createElement("div", { className: "input-group mb-3" },
-                            React.createElement("input", { type: "text", className: "form-control form-control-lg", placeholder: "" }),
+                            React.createElement("input", { type: "text", className: "form-control form-control-lg", placeholder: 'Search for "Loganholme"' }),
                             React.createElement("div", { className: "input-group-append" },
-                                React.createElement("button", { className: "btn btn-info btn-lg", type: "button" }, "Search")))))),
+                                React.createElement("button", { className: "btn btn-success btn-lg", type: "button" }, "Search!")))))),
             React.createElement("div", { className: "SearchBG" },
                 React.createElement("img", { src: this.state.natureImage }))));
     };
@@ -706,9 +721,8 @@ var Root = /** @class */ (function (_super) {
         return _this;
     }
     Root.prototype.componentWillMount = function () {
-        var _this = this;
         this.frontEndController.mountSetResultsVisibility(this.changeFrontendShow);
-        setTimeout(function () { _this.frontEndController.doSearch("LOGANHOLM"); }, 5000);
+        // setTimeout(() => { this.frontEndController.doSearch("LOGAN"); }, 1000);
     };
     Root.prototype.changeFrontendShow = function (bool) {
         this.setState({
@@ -806,7 +820,7 @@ var FrontEndController = /** @class */ (function () {
     FrontEndController.prototype.doSearch = function (text) {
         var _this = this;
         axios_1.default.post("/api/findLoc/fuzzy/" + text).then(function (response) {
-            console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
+            // console.log("PRIMARY RESPONSE: " + JSON.stringify(response.data));
             _this.resultsVisFunc(true);
             _this.setResult(response.data);
         });
@@ -2625,7 +2639,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SearchPage {\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n}\n.SearchPage .SearchContent {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n.SearchPage .SearchContent .SearchContainer {\n  min-height: 100px;\n  min-width: 100px;\n  z-index: 1000;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.SearchPage .SearchContent .SearchContainer .SearchBar {\n  padding-left: 50px;\n}\n.SearchPage .SearchContent .SearchContainer .SearchBar input {\n  width: 40rem;\n}\n.SearchPage .SearchContent .SearchContainer .UmbrellaLogo {\n  border-right: 1px solid white ;\n}\n.SearchPage .SearchContent .SearchContainer .UmbrellaLogo svg {\n  height: 5rem;\n  padding-right: 50px;\n}\n.SearchPage .SearchBG {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100vw;\n  height: 100vh;\n  overflow: hidden;\n}\n.SearchPage .SearchBG img {\n  /* Center and scale the image nicely */\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100vh;\n  filter: blur(5px);\n  transform: scale(2);\n}\n", ""]);
+exports.push([module.i, ".FirstSearchPage {\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n}\n.FirstSearchPage .FirstSearchContent {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n.FirstSearchPage .FirstSearchContent .FirstSearchContainer {\n  min-height: 100px;\n  min-width: 100px;\n  z-index: 1000;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n.FirstSearchPage .FirstSearchContent .FirstSearchContainer .SearchBar {\n  padding-left: 50px;\n}\n.FirstSearchPage .FirstSearchContent .FirstSearchContainer .SearchBar input {\n  width: 40rem;\n}\n.FirstSearchPage .FirstSearchContent .FirstSearchContainer .UmbrellaLogo {\n  border-right: 1px solid white ;\n}\n.FirstSearchPage .FirstSearchContent .FirstSearchContainer .UmbrellaLogo svg {\n  height: 5rem;\n  padding-right: 50px;\n}\n.FirstSearchPage .SearchBG {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100vw;\n  height: 100vh;\n  overflow: hidden;\n}\n.FirstSearchPage .SearchBG img {\n  /* Center and scale the image nicely */\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100vh;\n  filter: blur(5px);\n  transform: scale(2);\n}\n", ""]);
 
 // exports
 

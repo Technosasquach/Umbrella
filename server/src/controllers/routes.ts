@@ -33,7 +33,7 @@ app.post("/api/findLoc/suggestions/:id", (req: Request, res: Response) => {
 app.post("/api/findLoc/fuzzy/:id", (req: Request, res: Response) => {
     const results = elastSearch.search(req.params.id);
     console.log("Fuzzy | ID: " + req.params.id + " | Results " + JSON.stringify(results))
-    res.json(SearchUtil.searchObjToJSONObj(results));
+    res.json(SearchUtil.searchObjToJSONObj(results)[0]);
 });
 
 app.post("/api/proxy", (req: Request, res: Response) => {

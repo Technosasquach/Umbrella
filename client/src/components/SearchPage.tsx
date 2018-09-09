@@ -47,9 +47,9 @@ export default class SearchPage extends React.Component<{},{natureImage: string}
 
     render() {
         return (
-            <div className="SearchPage">
-                <div className="SearchContent">
-                    <div className="SearchContainer">
+            <div className="FirstSearchPage">
+                <div className="FirstSearchContent">
+                    <div className="FirstSearchContainer">
                         <div className= "UmbrellaLogo">
                             <LogoSVG/>
                         </div>
